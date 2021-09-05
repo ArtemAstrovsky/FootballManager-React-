@@ -1,0 +1,62 @@
+/* Home */
+.home__conteiner {
+	max-width: 1300px;
+	margin: 0px 10px 0px 10px;
+}
+
+.home__tablo {
+	display: flex;
+	justify-content: center;
+}
+.home__command {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.home__command p {
+	font-size: 25px;
+}
+.home__command img{
+	margin-top: 30px ;
+	width: 150px;
+	height: 150px;
+}
+
+.home__check {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 10px ;
+	justify-content: flex-start;
+}
+.home__check p {
+	margin-top: 45px;
+	font-size: 40px;
+}
+.home__button {
+	text-align: center;
+}
+
+/* Club Table (Home) */
+.clublist {
+	width: 100%;
+	border-collapse: collapse;
+}
+.clublist__thead tr {
+	color: #ffffff; 
+	font-weight: bold; 
+	background: #00bf80;
+}
+.clublist__thead tr td {
+	border: 1px solid #01ab73;
+}
+.clublist__tbody tr td {
+	border: 1px solid #e8e9eb;
+	text-align: center;
+}
+.clublist__tbody tr:nth-child(2n) {
+	background: #f4f4f4;
+}
+.clublist__tbody tr:hover {
+	background: #ebffe8;
+}

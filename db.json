@@ -1,0 +1,562 @@
+{
+	"teams": [{
+			"id": 1,
+			"clubName": "Liverpool",
+			"force": 1790,
+			"img": "/img/Liverpool.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 2,
+			"clubName": "Manchester United",
+			"force": 1690,
+			"img": "/img/ManchesterUnited.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 3,
+			"clubName": "Manchester City",
+			"force": 1800,
+			"img": "/img/ManchesterCity.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 4,
+			"clubName": "Chelsea",
+			"force": 1690,
+			"img": "/img/Chelsea.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 5,
+			"clubName": "Valencia",
+			"force": 1590,
+			"img": "/img/Valencia.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 6,
+			"clubName": "Arsenal",
+			"force": 1660,
+			"img": "/img/Arsenal.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 7,
+			"clubName": "Everton",
+			"force": 1540,
+			"img": "/img/Everton.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 8,
+			"clubName": "Crystal Pelas",
+			"force": 1450,
+			"img": "/img/CrystalPelas.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 9,
+			"clubName": "Blackburn Rovers",
+			"force": 1370,
+			"img": "/img/BlackburnRovers.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 10,
+			"clubName": "Aston Villa",
+			"force": 1500,
+			"img": "/img/AstonVilla.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 11,
+			"clubName": "Birmingham City",
+			"force": 1430,
+			"img": "/img/BirminghamCity.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 12,
+			"clubName": "Bavaria",
+			"force": 1690,
+			"img": "/img/Bavaria.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 13,
+			"clubName": "Koln",
+			"force": 1460,
+			"img": "/img/Koln.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 14,
+			"clubName": "Real Madrid",
+			"force": 1800,
+			"img": "/img/RealMadrid.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 15,
+			"clubName": "Barcelona",
+			"force": 1750,
+			"img": "/img/Barcelona.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 16,
+			"clubName": "Bayer Leverkusen",
+			"force": 1650,
+			"img": "/img/BayerLeverkusen.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0
+		},
+		{
+			"id": 17,
+			"clubName": "Your team",
+			"force": 0,
+			"img": "/img/Club2.png",
+			"game": 0,
+			"victory": 0,
+			"draw": 0,
+			"defeat": 0,
+			"glasses": 0,
+			"money": 0
+		}
+	],
+	"playres": [{
+			"id": 101,
+			"playerName": "Lionel Messi",
+			"pastClub": "PSG",
+			"force": 90,
+			"price": 19000000,
+			"playerStatus": true,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 102,
+			"playerName": "Virgil van Dyck",
+			"pastClub": "Liverpool",
+			"force": 86,
+			"price": 21000000,
+			"playerStatus": false,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 103,
+			"playerName": "Sadio Mane",
+			"pastClub": "Liverpool",
+			"force": 80,
+			"price": 19530000,
+			"playerStatus": false,
+			"img": "/img/player2.png"
+		},
+		{
+			"id": 104,
+			"playerName": "Cristiano Ronaldo",
+			"pastClub": "Manchester United",
+			"force": 91,
+			"price": 22000000,
+			"playerStatus": false,
+			"img": "/img/player3.png"
+		},
+		{
+			"id": 105,
+			"playerName": "Robert Lewandowski",
+			"pastClub": "Bavaria",
+			"force": 90,
+			"price": 18055000,
+			"playerStatus": false,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 106,
+			"playerName": "Alisson Becker",
+			"pastClub": "Liverpool",
+			"force": 90,
+			"price": 16330000,
+			"playerStatus": false,
+			"img": "/img/player2.png"
+		},
+		{
+			"id": 107,
+			"playerName": "Kevin de Bruyne",
+			"pastClub": "Manchester city",
+			"force": 78,
+			"price": 16700000,
+			"playerStatus": false,
+			"img": "/img/player2.png"
+		},
+		{
+			"id": 108,
+			"playerName": "Sergio Aguero",
+			"pastClub": "Manchester city",
+			"force": 76,
+			"price": 17600000,
+			"playerStatus": false,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 109,
+			"playerName": "Andrey Yarmolenko",
+			"pastClub": "West Ham United",
+			"force": 63,
+			"price": 8005000,
+			"playerStatus": false,
+			"img": "/img/player3.png"
+		},
+		{
+			"id": 110,
+			"playerName": "Hyun Min Son",
+			"pastClub": "Tottenham",
+			"force": 59,
+			"price": 7300000,
+			"playerStatus": false,
+			"img": "/img/player3.png"
+		},
+		{
+			"id": 111,
+			"playerName": "Wilfrid Zaha",
+			"pastClub": "Сrystal Pelas",
+			"force": 55,
+			"price": 6300000,
+			"playerStatus": false,
+			"img": "/img/player2.png"
+		},
+		{
+			"id": 112,
+			"playerName": "Willian",
+			"pastClub": "Arsenal",
+			"force": 55,
+			"price": 5200000,
+			"playerStatus": false,
+			"img": "/img/player2.png"
+		},
+		{
+			"id": 113,
+			"playerName": "Luke Shaw",
+			"pastClub": "Manchester United",
+			"force": 49,
+			"price": 4300000,
+			"playerStatus": false,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 114,
+			"playerName": "Kasper Schmeichel",
+			"pastClub": "Leicester City",
+			"force": 53,
+			"price": 5200000,
+			"playerStatus": false,
+			"img": "/img/player3.png"
+		},
+		{
+			"id": 115,
+			"playerName": "Sergio Romero",
+			"pastClub": "Manchester United",
+			"force": 56,
+			"price": 5440000,
+			"playerStatus": false,
+			"img": "/img/player3.png"
+		},
+		{
+			"id": 116,
+			"playerName": "Alisson Becker",
+			"pastClub": "Liverpool",
+			"force": 72,
+			"price": 11100000,
+			"playerStatus": false,
+			"img": "/img/player3.png"
+		},
+		{
+			"id": 117,
+			"playerName": "Alexander Zinchenko",
+			"pastClub": "Manchester city",
+			"force": 66,
+			"price": 8900000,
+			"playerStatus": false,
+			"img": "/img/player3.png"
+		},
+		{
+			"id": 118,
+			"playerName": "Joe Allen",
+			"pastClub": "Stoke City",
+			"force": 44,
+			"price": 3300000,
+			"playerStatus": false,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 119,
+			"playerName": "Pablo Zabaleta",
+			"pastClub": "West Ham United",
+			"force": 45,
+			"price": 3600000,
+			"playerStatus": false,
+			"img": "/img/player3.png"
+		},
+		{
+			"id": 120,
+			"playerName": "Kurt Zuma",
+			"pastClub": "Everton",
+			"force": 51,
+			"price": 3600000,
+			"playerStatus": false,
+			"img": "/img/player2.png"
+		},
+		{
+			"id": 121,
+			"playerName": "Jaka Granite",
+			"pastClub": "Arsenal",
+			"force": 39,
+			"price": 2900000,
+			"playerStatus": false,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 122,
+			"playerName": "Lionel Messi",
+			"pastClub": "PSG",
+			"force": 90,
+			"price": 19000000,
+			"playerStatus": false,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 123,
+			"playerName": "Harry Kane",
+			"pastClub": "Tottenham",
+			"force": 69,
+			"price": 9200000,
+			"playerStatus": false,
+			"img": "/img/player3.png"
+		},
+		{
+			"id": 124,
+			"playerName": "Nick Pope",
+			"pastClub": "Burnley",
+			"force": 44,
+			"price": 3467000,
+			"playerStatus": false,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 125,
+			"playerName": "Olivier Giroud",
+			"pastClub": "Chelsea",
+			"force": 64,
+			"price": 6740000,
+			"playerStatus": false,
+			"img": "/img/player3.png"
+		},
+		{
+			"id": 126,
+			"playerName": "Robert Brady",
+			"pastClub": "Burnley",
+			"force": 47,
+			"price": 4230000,
+			"playerStatus": false,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 127,
+			"playerName": "Sam Johnston",
+			"pastClub": "West Bromwich",
+			"force": 39,
+			"price": 1990000,
+			"playerStatus": false,
+			"img": "/img/player3.png"
+		},
+		{
+			"id": 128,
+			"playerName": "Ryan Taylor",
+			"pastClub": "Hull City",
+			"force": 43,
+			"price": 3150000,
+			"playerStatus": true,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 129,
+			"playerName": "Lionel Messi",
+			"pastClub": "PSG",
+			"force": 90,
+			"price": 19000000,
+			"playerStatus": true,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 130,
+			"playerName": "Adam Lallana",
+			"pastClub": "Liverpool",
+			"force": 67,
+			"price": 4840000,
+			"playerStatus": true,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 131,
+			"playerName": "Dele Alli",
+			"pastClub": "Tottenham",
+			"force": 54,
+			"price": 4630000,
+			"playerStatus": true,
+			"img": "/img/player2.png"
+		},
+		{
+			"id": 132,
+			"playerName": "Michael Dawson",
+			"pastClub": "Hull City",
+			"force": 38,
+			"price": 3500000,
+			"playerStatus": true,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 133,
+			"playerName": "Charlie Austin",
+			"pastClub": "Southampton",
+			"force": 47,
+			"price": 2700000,
+			"playerStatus": true,
+			"img": "/img/player3.png"
+		},
+		{
+			"id": 134,
+			"playerName": "Hector Bellerin",
+			"pastClub": "Arsenal",
+			"force": 56,
+			"price": 5445000,
+			"playerStatus": true,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 135,
+			"playerName": "Ashley Williams",
+			"pastClub": "Stoke City",
+			"force": 27,
+			"price": 1790000,
+			"playerStatus": true,
+			"img": "/img/player2.png"
+		},
+		{
+			"id": 136,
+			"playerName": "Jorginho",
+			"pastClub": "Chelsea",
+			"force": 76,
+			"price": 8700000,
+			"playerStatus": true,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 137,
+			"playerName": "Fred",
+			"pastClub": "Manchester United",
+			"force": 65,
+			"price": 6400000,
+			"playerStatus": true,
+			"img": "/img/player2.png"
+		},
+		{
+			"id": 138,
+			"playerName": "Thomas Mejias",
+			"pastClub": "Middlesbrough",
+			"force": 48,
+			"price": 3430000,
+			"playerStatus": true,
+			"img": "/img/player3.png"
+		},
+		{
+			"id": 139,
+			"playerName": "Shinji Okazaki",
+			"pastClub": "Leicester City",
+			"force": 56,
+			"price": 4600000,
+			"playerStatus": true,
+			"img": "/img/player3.png"
+		},
+		{
+			"id": 140,
+			"playerName": "Carlos Sanchez",
+			"pastClub": "West Ham United",
+			"force": 52,
+			"price": 3455000,
+			"playerStatus": true,
+			"img": "/img/player1.png"
+		},
+		{
+			"id": 141,
+			"playerName": "Stephen Cocker",
+			"pastClub": "Southampton",
+			"force": 42,
+			"price": 3434000,
+			"playerStatus": true,
+			"img": "/img/player3.png"
+		}
+	],
+	"yourplayes": []
+}

@@ -1,0 +1,107 @@
+.container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background: url(../img/createteam4.jpg) no-repeat;
+	background-size:100%
+}
+
+.header {
+	margin-top: 10px;
+	width: 950px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.header img {
+	height: 100px;
+	width: 100px;
+}
+.header__title h1{
+	font-size: 34px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.header__title p{
+	font-size: 22px;
+	text-align: center;
+}
+
+/* Block creating team  */
+.creating {
+	width: 930px;
+	height: 540px;
+	background-color: white;
+	margin: 0px 15px 15px 15px;
+}
+.creating__col {
+	margin: 10px 15px 10px 15px;
+}
+.creating__block {
+	margin: 15px;
+}
+.creating__team {
+	margin: 10px 15px 10px 15px;
+}
+.creating__team p {
+	margin-top: 10px;
+}
+.creating__leval {
+	margin: 35px 10px 10px 20px ;
+}
+.creating__leval p {
+	display: flex;
+	align-items: center;
+	margin-left: -10px;
+}
+.creating__leval p span {
+	margin-left: 10px;
+}
+
+/* Button create team  */
+.creating__button {
+	margin: 50px 10px 10px 10px;
+}
+
+#button {
+	border-radius: 4px;
+	font-weight: 700;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+	color: rgb(255, 255, 255);
+	background-color: rgb(2, 2, 2);
+	display:block;
+	width:250px;
+	height: 50px;
+	text-align: center;
+	font-size: 14px;
+	padding: 8px 16px;
+	margin: 20px auto;
+	text-decoration: none;
+	text-shadow: 0 1px 1px rgb(0, 0, 0);
+}
+
+/* Form choice */
+.form__block {
+	margin: 10px 30px 10px 30px;
+}
+.form__radio {
+	display: flex;
+	flex-wrap: wrap;
+}
+.form {
+	margin: 1px 15px 1px 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.form__button {
+	margin-left: 8px;
+	color: gray;
+}
+.form img {
+	height: 60px;
+	width: 60px;
+}

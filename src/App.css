@@ -1,0 +1,11 @@
+@import '~antd/dist/antd.css';
+
+#root {
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	overflow-x:hidden;
+}
+
+
+
