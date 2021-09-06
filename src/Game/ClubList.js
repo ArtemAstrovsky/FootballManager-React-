@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './Home.module.css'
+import s from './Game.module.css'
 
 const ClubList = (props) => {
 

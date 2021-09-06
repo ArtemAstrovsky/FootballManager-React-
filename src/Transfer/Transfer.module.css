@@ -75,3 +75,23 @@
 #button:hover {
 	background-color: black;
 }
+
+/* Header */
+
+.transfer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 15px 15px 0px 15px;
+}
+.transfer h1 {
+	margin-top: 10px;
+	font-size: 40px;
+	letter-spacing: 2px;
+	font-weight: 500;
+}
+
+.transfer__img {
+	margin-top: 22px;
+	height: 50px;
+}

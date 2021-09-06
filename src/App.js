@@ -6,6 +6,7 @@ import Transfer from './Transfer/Transfer'
 import Home from './Home/Home'
 import CreatingTeam from './CreatingTeam/CreatingTeam'
 import Registration from './Registration/Registration'
+import Error from './Error/Error'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 				<Route exact path="/creatingteam" component={CreatingTeam}/>
 				<Route exact path="/buy" component={CreatingTeam}/>
 				<Route exact path="/registration" component={Registration}/>
+				<Route component={Error}/>
 			</Switch>
 		</Router>
 		</div>
