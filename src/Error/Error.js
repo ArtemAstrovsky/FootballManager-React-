@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 function Error() {
 	const styleError = {
-		color : "black"
+		color : "white"
 	}
 
 	return(

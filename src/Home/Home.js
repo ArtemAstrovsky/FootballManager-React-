@@ -1,9 +1,32 @@
-// import s from './Home.module.css'
+import s from './Home.module.css'
+import React, { useEffect, useState } from 'react'
+import Loader from '../Loader/Loader'
+import YourTeam from './YourTeam'
+import MatchList from './MatchList'
 
 
 function Home() {
+	const [match , setMatch] = useState([])
+   const [isLoading, setIsLoading] = useState(true)
+
+
+	useEffect(() => {
+      fetch('/teams')
+         .then(result => result.json())
+         .then((result) => {
+            setMatch(result)
+            setIsLoading(false)
+         }
+   )}, [])
+
 	return (
-		<h1>Your Club</h1>
+		<div className={s.home}>
+			<div>{isLoading ? <Loader /> : <YourTeam/>}</div>
+			<div>
+				<h1>European Premier League</h1>
+			</div>
+			<div>{isLoading ? <Loader /> : <MatchList matchList={match}/>}</div>
+		</div>
 	);
 }
 

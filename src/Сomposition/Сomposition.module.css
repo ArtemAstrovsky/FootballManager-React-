@@ -1,0 +1,43 @@
+.composition {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.headerlist {
+	margin-top: 30px;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 10px;
+	
+}
+/* Composition Table  */
+
+.composition__conteiner {
+	max-width: 1200px;
+	margin: 0px 10px 0px 10px;
+	margin: 0 auto;
+}
+
+.composition {
+	width: 100%;
+	border-collapse: collapse;
+}
+.composition__thead tr {
+	color: #ffffff; 
+	font-weight: bold; 
+	background: rgb(36, 36, 36);
+}
+.composition__thead tr td {
+	border: 1px solid rgb(36, 36, 36);
+}
+.composition__tbody tr td {
+	border: 1px solid #e8e9eb;
+	text-align: center;
+}
+.composition__tbody tr:nth-child(2n) {
+	background: #f4f4f4;
+}
+.composition__tbody tr:hover {
+	background: #ebffe8;
+}

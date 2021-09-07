@@ -1,7 +1,7 @@
 import s from './Registration.module.css'
 import React from 'react'
-import { Carousel } from 'antd';
-import { Button } from 'antd';
+import { Carousel,Button } from 'antd';
+import { Link } from "react-router-dom"
 
 
 const Registration = () => {
@@ -20,7 +20,9 @@ const Registration = () => {
 					<div className={s.foother}>
 						<h1>FOOTBALL MANAGER IТ FOOTBALL</h1>
 						<p>Create a dream team and bring it to victory <br/> free online game. </p>
-						<Button id={s.button} type="primary">CREATE A TEAM</Button>
+						<Button id={s.button} type="primary">
+							<Link to="/creatingteam">CREATE A TEAM</Link>
+						</Button>
 					</div>
 				</div>
 			</div>
@@ -31,7 +33,9 @@ const Registration = () => {
 						<p>Communicating in the chat and on football forums there you will find new friends.<br/> 
 							The consultant team will help you to go through a difficult path from the <br/>
 							not famous football club to the manager of one of the top teams of his championship. </p>
-						<Button id={s.button} type="primary">CREATE A TEAM</Button>
+						<Button id={s.button} type="primary">
+							<Link to="/creatingteam">CREATE A TEAM</Link>
+						</Button>
 					</div>
 				</div>
 			</div>
@@ -45,7 +49,9 @@ const Registration = () => {
 							chance to pass from creating a team to the championship title, you can choose a form, <br/>
 							stadium, buy players and so on. We are waiting for you in the highest league of the <br/>
 							chosen championship.  </p>
-						<Button id={s.button} type="primary">CREATE A TEAM</Button>
+						<Button id={s.button} type="primary">
+							<Link to="/creatingteam">CREATE A TEAM</Link>
+						</Button>
 					</div>
 				</div>
 			</div>

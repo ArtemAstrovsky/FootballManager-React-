@@ -10,8 +10,9 @@ const nav = [
 	{"link" : "/", "text" : "Home"},
 	{"link" : "/game", "text" : "Game"},
 	{"link" : "/transfer", "text" : "Transfer"},
-	{"link" : "/creatingteam", "text" : "Create a team"},
+	{"link" : "/composition", "text" : "Сomposition"},
 	{"link" : "/buy", "text" : "Buy"},
+	{"link" : "/creatingteam", "text" : "Create a team"},
 	{"link" : "/registration", "text" : "Registration"},
 ]
 

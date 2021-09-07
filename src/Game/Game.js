@@ -7,14 +7,14 @@ import ClubTable from "./СlubTable"
 function Game() {
 
 	return(
-		<>	
-			<div className={s.home__conteiner}>
-				<div className={s.home__tablo}>
-					<div className={s.home__command}>
-						<img src="../img/Club2.png" alt="" />
-						<p>Название команды</p>
+		<div className={s.game}>
+			<div className={s.game__conteiner}>
+				<div className={s.game__tablo}>
+					<div className={s.game__command}>
+						<img src="../img/Club6.png" alt="" />
+						<p>Team name</p>
 					</div>
-					<div className={s.home__check}>
+					<div className={s.game__check}>
 						<h2>Match Championship</h2>
 						<p>
 							<span>2</span>
@@ -22,25 +22,20 @@ function Game() {
 							<span>0</span>
 						</p>
 					</div>
-					<div className={s.home__command}>
+					<div className={s.game__command}>
 						<img src="../img/Liverpool.png" alt="" />
-						<p>Название команды</p>
+						<p>Team name</p>
 					</div>
 				</div>
-				<div className={s.home__button}>
-					<Button type="primary">Game</Button>
-				</div>
+				<Button className={s.game__button} type="primary">Game</Button>
 			</div>
 			<div className={s.clublist__conteiner}>
-				<div className={s.home__clubtable}>
-					<div>
-						<img src="../img/EuropeaLeague.png" alt="" />
-						<h1>European Premier League</h1>
-					</div>
+				<div className={s.game__clubtable}>
+					<h1>Match schedule</h1>
 					<ClubTable />
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }
 

@@ -1,17 +1,22 @@
 import s from './CreatingTeam.module.css'
 import React from 'react'
-import { Row, Col , Input , Radio , message , Button } from 'antd';
-import { UserOutlined , ExclamationCircleOutlined , HomeOutlined} from '@ant-design/icons';
-import SelectForm from './SelectForm';
-import SelectLogo from './SelectLogo';
+import { useState } from 'react'
+import { Row, Col , Input , Radio , message , Button } from 'antd'
+import { UserOutlined , ExclamationCircleOutlined , HomeOutlined} from '@ant-design/icons'
+import SelectForm from './SelectForm'
+import SelectLogo from './SelectLogo'
 
 const CreatingTeam = () => {
-
+	const [city, setCity] = useState('');
+	const [teamName, setTeamName] = useState('');
 	const warning = () => { // Description of the level of complexity 
 		message.warning(`From the difficulty level that you select the depends 
-			on the older amount ($) to which you can count `);
-	};
-
+			on the older amount ($) to which you can count `)
+	}
+	let inform = () => {
+		console.log(city)
+		console.log(teamName)
+	}
    return (
 		<div className={s.container}>
 			<div className={s.header}>
@@ -28,23 +33,23 @@ const CreatingTeam = () => {
 						<div className={s.creating__block}>
 							<div className={s.creating__team}>
 								<p>Team name</p>
-								<Input size="large" placeholder="Team name" prefix={<UserOutlined />} />
+								<Input size="large" placeholder="Team name" onChange={event => setCity(event.target.value)} prefix={<UserOutlined />} />
 								<p>Тown</p>
-								<Input size="large" placeholder="Тown" prefix={<HomeOutlined />} />
+								<Input size="large" placeholder="Тown" onChange={event => setTeamName(event.target.value)} prefix={<HomeOutlined />} />
 							</div>
 							<div className={s.creating__leval}>
 								<p><ExclamationCircleOutlined 
 									style={{ fontSize: '24px'}} 
 									onClick={warning}/><span>Difficulty level</span></p> 
 								<Radio.Group name="radiodifficulty" defaultValue={1}>
-									<Radio value={1}>Heavy</Radio><br/>
-									<Radio value={2}>Medium</Radio><br/>
-									<Radio value={3}>Light</Radio><br/>
+									<Radio value={"Heavy"}>Heavy</Radio><br/>
+									<Radio value={"Medium"}>Medium</Radio><br/>
+									<Radio value={"Light"}>Light</Radio><br/>
 								</Radio.Group>
 							</div>
 						</div>
 						<div className={s.creating__button}>
-							<Button id={s.button} type="primary">Create a team</Button>
+							<Button id={s.button} onClick={inform} type="primary">Create a team</Button>
 						</div>
 					</Col>
 					<Col className={s.creating__col} span={11}>

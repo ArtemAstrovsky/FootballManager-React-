@@ -1,0 +1,81 @@
+/* Home */
+.home {
+	margin: 0 auto;
+	max-width: 1120px;
+	padding: 0px 10px 10px 0px;
+}
+/* Match List (Home) */
+.matchList__conteiner {
+	max-width: 1100px;
+	padding: 0px 5px 0px 5px;
+	margin: 0 auto;
+}
+
+.matchList {
+	width: 100%;
+	margin-bottom: 20px;
+	border-collapse: collapse;
+}
+.matchList__thead tr {
+	color: #ffffff; 
+	font-weight: bold; 
+	background: rgb(36, 36, 36);
+}
+.matchList__thead tr td {
+	border: 1px solid rgb(36, 36, 36);
+}
+.matchList__tbody tr td {
+	border: 1px solid #e8e9eb;
+	text-align: center;
+}
+.matchList__tbody tr:nth-child(2n) {
+	background: #f4f4f4;
+}
+.matchList__tbody tr:hover {
+	background: #ebffe8;
+}
+
+.clubinfo {
+	z-index: 40;
+	height: 320px;
+	width: 250px;
+}
+
+/* Your Team */
+.yourinfo  {
+	display: flex;
+	background-color: rgb(95, 95, 95);
+	margin: 25px 10px 25px 10px;
+	height: 230px;
+}
+.yourteam {
+	display: flex;
+	justify-content: flex-start;
+	color: white;
+	background-color: rgb(36, 36, 36);
+	width: 75%;
+}
+.yourteam img{
+	margin: 10px;
+}
+.info h1 {
+	color: white;
+	margin: 20px 10px 10px 10px;
+	font-size: 30px;
+}
+.info p {
+	margin: 0px 10px 0px 10px;
+	font-size: 14px;
+}
+
+.yourteam__img {
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.yourteam__img img {
+	background-color: white;
+	height: 200px;
+	margin: 10px;
+}
