@@ -11,7 +11,7 @@ function YourTeam() {
 				setYourTeam(result)
 			}
 	)}, [])
-	return ( // Сразу идет рендер, потом догоняет юз эффект....
+	return ( 
 		<div className={s.yourinfo}>
 			<div className={s.yourteam}>
 				<img src={yourTeam.img} alt={yourTeam.id} width="200" height="200"/>
@@ -33,25 +33,3 @@ function YourTeam() {
 }
 
 export default YourTeam;
-
-
-
-//   "yourteam": [
-//     {
-//       "id": 1,
-//       "clubName": "Zenit",
-//       "force": 0,
-//       "img": "../img/Club8.png",
-//       "game": 0,
-//       "victory": 0,
-//       "draw": 0,
-//       "defeat": 0,
-//       "glasses": 0,
-//       "money": 0,
-//       "numberofplayers": 0,
-//       "difficulty": 50000000,
-//       "city": "Piter",
-//       "form": "../img/form4.png",
-// 		"registration": false,
-// 		"login": false
-//     }

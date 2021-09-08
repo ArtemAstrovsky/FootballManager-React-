@@ -6,7 +6,7 @@ import FormSelection from './FormSelection'
 import LogoSelection from './LogoSelection'
 import СityСlubСhoice from './СityСlubСhoice'
 
-const CreatingTeam = () => { // изменить название 
+const CreatingTeam = (props) => { // изменить название 
 	const [city, setCity] = useState('');
 	const [teamName, setTeamName] = useState('');
 	const [selectedForm, setSelectedForm] = useState(1);
@@ -65,12 +65,14 @@ const CreatingTeam = () => { // изменить название
 							<FormSelection 
 								className={s.selects}
 								selectedForm={selectedForm}
-								setSelectedForm={setSelectedForm} 
+								setSelectedForm={setSelectedForm}
+								form={props.form}
 							/>
 							<LogoSelection
 								className={s.selects} 
 								setSelectedLogo={setSelectedLogo}
 								selectedLogo={selectedLogo}
+								logo={props.logo}
 							/>
 						</div>
 					</Col>

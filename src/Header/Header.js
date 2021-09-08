@@ -6,25 +6,14 @@ import s from './Header.module.css'
 
 const { Header } = Layout;
 
-const nav = [
-	{"link" : "/", "text" : "Home"},
-	{"link" : "/game", "text" : "Game"},
-	{"link" : "/transfer", "text" : "Transfer"},
-	{"link" : "/composition", "text" : "Сomposition"},
-	{"link" : "/buy", "text" : "Buy"},
-	{"link" : "/creatingteam", "text" : "Create a team"},
-	{"link" : "/registration", "text" : "Registration"},
-]
-
-function HeaderMenu() {
-	let navItems = nav.map(item => (
+function HeaderMenu(props) {
+	let navItems = props.nav.map(item => (
 		<Menu.Item key={item.link}>
 			<Link to={item.link}>
 				{item.text}
 			</Link>
 		</Menu.Item>
 	))
-
 
 	return (
 		<>

@@ -10,16 +10,16 @@ import Error from './Error/Error'
 import Composition from './Сomposition/Сomposition'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
-function App() {
+function App(props) {
 	return (
 		<div>
 		<Router>
-			<HeaderMenu />
+			<HeaderMenu nav={props.nav}/>
 			<Switch>
 				<Route exact path="/" component={Home}/>
 				<Route exact path="/game" component={Game}/>                   
 				<Route exact path="/transfer" component={Transfer}/>
-				<Route exact path="/creatingteam" component={CreatingTeam}/>
+				<Route exact path="/creatingteam" render={() => <CreatingTeam form={props.form} logo={props.logo} />}/>
 				<Route exact path="/composition" component={Composition}/>
 				<Route exact path="/creatingteam" component={CreatingTeam}/>
 				<Route exact path="/registration" component={Registration}/>
