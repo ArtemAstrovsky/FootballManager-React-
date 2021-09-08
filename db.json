@@ -180,9 +180,9 @@
   "yourteam": [
     {
       "id": 1,
-      "clubName": "Your name",
+      "clubName": "Dinamo",
       "force": 0,
-      "img": "/img/Club6.png",
+      "img": "../img/Club5.png",
       "game": 0,
       "victory": 0,
       "draw": 0,
@@ -190,9 +190,11 @@
       "glasses": 0,
       "money": 0,
       "numberofplayers": 0,
-      "Heavy": 30000000,
-      "Medium": 40000000,
-      "Light": 50000000
+      "difficulty": 30000000,
+      "city": "Erevan",
+      "form": "../img/form8.png",
+      "registration": false,
+      "login": false
     }
   ],
   "playres": [
@@ -202,7 +204,7 @@
       "pastClub": "PSG",
       "force": 90,
       "price": 13110000,
-      "playerStatus": true,
+      "playerStatus": false,
       "img": "/img/player3.png"
     },
     {
@@ -238,7 +240,7 @@
       "pastClub": "Bavaria",
       "force": 85,
       "price": 10455000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player3.png"
     },
     {
@@ -247,7 +249,7 @@
       "pastClub": "Liverpool",
       "force": 84,
       "price": 10330000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player2.png"
     },
     {
@@ -256,7 +258,7 @@
       "pastClub": "Manchester city",
       "force": 78,
       "price": 10700000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player2.png"
     },
     {
@@ -274,7 +276,7 @@
       "pastClub": "West Ham United",
       "force": 66,
       "price": 7505000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player3.png"
     },
     {
@@ -283,7 +285,7 @@
       "pastClub": "Tottenham",
       "force": 59,
       "price": 6300000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player3.png"
     },
     {
@@ -319,7 +321,7 @@
       "pastClub": "Leicester City",
       "force": 53,
       "price": 5200000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player3.png"
     },
     {
@@ -328,7 +330,7 @@
       "pastClub": "Manchester United",
       "force": 56,
       "price": 4940000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player3.png"
     },
     {
@@ -337,7 +339,7 @@
       "pastClub": "Liverpool",
       "force": 72,
       "price": 8300000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player3.png"
     },
     {

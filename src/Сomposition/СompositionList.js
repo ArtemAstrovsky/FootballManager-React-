@@ -26,7 +26,7 @@ function СompositionList(props) {
 			<table className={s.composition}>
 				<thead className={s.composition__thead}>
 					<tr>
-						<th>Player name</th>
+						<th>Player name</th> 
 						<th>Power player</th>
 						<th>Player value</th>
 						<th>Sale value</th>
