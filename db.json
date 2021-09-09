@@ -190,7 +190,7 @@
       "glasses": 0,
       "money": 0,
       "numberofplayers": 0,
-      "difficulty": 30000000,
+      "difficulty": 25060000,
       "city": "Neapol",
       "form": "../img/form9.png",
       "registration": false,
@@ -204,8 +204,9 @@
       "pastClub": "PSG",
       "force": 90,
       "price": 13110000,
-      "playerStatus": false,
-      "img": "/img/player3.png"
+      "playerStatus": true,
+      "img": "/img/player3.png",
+      "difficulty": 16890000
     },
     {
       "id": 102,
@@ -232,7 +233,8 @@
       "force": 91,
       "price": 13300000,
       "playerStatus": true,
-      "img": "/img/player3.png"
+      "img": "/img/player3.png",
+      "difficulty": 30000000
     },
     {
       "id": 105,
@@ -250,7 +252,8 @@
       "force": 84,
       "price": 10330000,
       "playerStatus": true,
-      "img": "/img/player2.png"
+      "img": "/img/player2.png",
+      "difficulty": 16700000
     },
     {
       "id": 107,
@@ -286,7 +289,8 @@
       "force": 59,
       "price": 6300000,
       "playerStatus": true,
-      "img": "/img/player3.png"
+      "img": "/img/player3.png",
+      "difficulty": 30000000
     },
     {
       "id": 111,
@@ -295,7 +299,8 @@
       "force": 55,
       "price": 5300000,
       "playerStatus": true,
-      "img": "/img/player2.png"
+      "img": "/img/player2.png",
+      "difficulty": 24770000
     },
     {
       "id": 112,
@@ -304,7 +309,8 @@
       "force": 55,
       "price": 5230000,
       "playerStatus": true,
-      "img": "/img/player2.png"
+      "img": "/img/player2.png",
+      "difficulty": 23700000
     },
     {
       "id": 113,
@@ -313,7 +319,8 @@
       "force": 49,
       "price": 4300000,
       "playerStatus": true,
-      "img": "/img/player1.png"
+      "img": "/img/player1.png",
+      "difficulty": 30000000
     },
     {
       "id": 114,
@@ -322,7 +329,8 @@
       "force": 53,
       "price": 5200000,
       "playerStatus": true,
-      "img": "/img/player3.png"
+      "img": "/img/player3.png",
+      "difficulty": 24700000
     },
     {
       "id": 115,
@@ -340,7 +348,8 @@
       "force": 72,
       "price": 8300000,
       "playerStatus": true,
-      "img": "/img/player3.png"
+      "img": "/img/player3.png",
+      "difficulty": 24800000
     },
     {
       "id": 117,
@@ -349,7 +358,8 @@
       "force": 66,
       "price": 7930000,
       "playerStatus": true,
-      "img": "/img/player3.png"
+      "img": "/img/player3.png",
+      "difficulty": 30000000
     },
     {
       "id": 118,
@@ -358,7 +368,8 @@
       "force": 44,
       "price": 3100000,
       "playerStatus": true,
-      "img": "/img/player1.png"
+      "img": "/img/player1.png",
+      "difficulty": 0
     },
     {
       "id": 119,

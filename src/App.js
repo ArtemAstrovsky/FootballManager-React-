@@ -14,12 +14,12 @@ function App(props) {
 	return (
 		<div>
 		<Router>
-			<HeaderMenu nav={props.nav}/>
+			<HeaderMenu nav={props.state.nav}/>
 			<Switch>
 				<Route exact path="/" component={Home}/>
 				<Route exact path="/game" component={Game}/>                   
 				<Route exact path="/transfer" component={Transfer}/>
-				<Route exact path="/creatingteam" render={() => <CreatingTeam form={props.form} logo={props.logo} />}/>
+				<Route exact path="/creatingteam" render={() => <CreatingTeam form={props.state.form} logo={props.state.logo} />}/>
 				<Route exact path="/composition" component={Composition}/>
 				<Route exact path="/creatingteam" component={CreatingTeam}/>
 				<Route exact path="/registration" component={Registration}/>
