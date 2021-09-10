@@ -112,17 +112,6 @@
     },
     {
       "id": 11,
-      "clubName": "Birmingham City",
-      "force": 1430,
-      "img": "/img/BirminghamCity.png",
-      "game": 0,
-      "victory": 0,
-      "draw": 0,
-      "defeat": 0,
-      "glasses": 0
-    },
-    {
-      "id": 12,
       "clubName": "Bavaria",
       "force": 1690,
       "img": "/img/Bavaria.png",
@@ -133,7 +122,7 @@
       "glasses": 0
     },
     {
-      "id": 13,
+      "id": 12,
       "clubName": "Koln",
       "force": 1460,
       "img": "/img/Koln.png",
@@ -144,7 +133,7 @@
       "glasses": 0
     },
     {
-      "id": 14,
+      "id": 13,
       "clubName": "Real Madrid",
       "force": 1800,
       "img": "/img/RealMadrid.png",
@@ -155,7 +144,7 @@
       "glasses": 0
     },
     {
-      "id": 15,
+      "id": 14,
       "clubName": "Barcelona",
       "force": 1750,
       "img": "/img/Barcelona.png",
@@ -166,7 +155,7 @@
       "glasses": 0
     },
     {
-      "id": 16,
+      "id": 15,
       "clubName": "Bayer Leverkusen",
       "force": 1650,
       "img": "/img/BayerLeverkusen.png",
@@ -179,9 +168,9 @@
   ],
   "yourteam": [
     {
-      "id": 1,
+      "id": 16,
       "clubName": "Neapol",
-      "force": 0,
+      "force": 1600,
       "img": "../img/Club4.png",
       "game": 0,
       "victory": 0,
@@ -190,7 +179,7 @@
       "glasses": 0,
       "money": 0,
       "numberofplayers": 0,
-      "difficulty": 25060000,
+      "difficulty": 95060000,
       "city": "Neapol",
       "form": "../img/form9.png",
       "registration": false,

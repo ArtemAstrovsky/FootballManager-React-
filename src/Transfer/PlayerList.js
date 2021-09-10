@@ -9,7 +9,7 @@ const PlayerList = props => {
 	// const [restMoney, setRestMoney] = useState(props.balanse)
 
 	useEffect(() => {
-		fetch('/yourteam/1')
+		fetch('/yourteam/16')
 			.then(result => result.json())
 			.then(result => setYourTeam(result))
 	}, [])
@@ -61,7 +61,7 @@ const PlayerList = props => {
 				playerStatus: !player.playerStatus,
 			}),
 		})
-		fetch('/yourteam/1', {
+		fetch('/yourteam/16', {
 			method: 'PUT',
 			headers: {
 				Accept: 'application/json',

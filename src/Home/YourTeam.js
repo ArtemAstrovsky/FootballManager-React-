@@ -5,7 +5,7 @@ function YourTeam() {
 	const [yourTeam, setYourTeam] = useState([])
 
 	useEffect(() => {
-		fetch('/yourteam/1')
+		fetch('/yourteam/16')
 			.then(result => result.json())
 			.then(result => {
 				setYourTeam(result)

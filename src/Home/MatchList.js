@@ -26,7 +26,7 @@ const MatchList = props => {
 						<th></th>
 						<th>Club name</th>
 						<th>Game</th>
-						<th>draw</th>
+						<th>Victory</th>
 						<th>Defeat</th>
 						<th>Glasses</th>
 					</tr>
@@ -37,7 +37,7 @@ const MatchList = props => {
 							<td>{index + 1}</td>
 							<td onClick={() => info2(item)}>{item.clubName}</td>
 							<td>{item.game}</td>
-							<td>{item.draw}</td>
+							<td>{item.victory}</td>
 							<td>{item.defeat}</td>
 							<td>{item.glasses}</td>
 						</tr>
