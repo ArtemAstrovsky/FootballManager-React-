@@ -8,26 +8,41 @@ import CreatingTeam from './CreatingTeam/CreatingTeam'
 import Registration from './Registration/Registration'
 import Error from './Error/Error'
 import Composition from './Сomposition/Сomposition'
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App(props) {
 	return (
 		<div>
-		<Router>
-			<HeaderMenu nav={props.state.nav}/>
-			<Switch>
-				<Route exact path="/" component={Home}/>
-				<Route exact path="/game" component={Game}/>                   
-				<Route exact path="/transfer" component={Transfer}/>
-				<Route exact path="/creatingteam" render={() => <CreatingTeam form={props.state.form} logo={props.state.logo} />}/>
-				<Route exact path="/composition" component={Composition}/>
-				<Route exact path="/creatingteam" component={CreatingTeam}/>
-				<Route exact path="/registration" component={Registration}/>
-				<Route component={Error}/>
-			</Switch>
-		</Router>
+			<Router>
+				<HeaderMenu nav={props.state.nav} />
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<Route
+						exact
+						path="/game"
+						render={() => (
+							<Game
+								сlubGames={props.state.сlubGames}
+								otherGames={props.state.otherGames}
+							/>
+						)}
+					/>
+					<Route exact path="/transfer" component={Transfer} />
+					<Route
+						exact
+						path="/creatingteam"
+						render={() => (
+							<CreatingTeam form={props.state.form} logo={props.state.logo} />
+						)}
+					/>
+					<Route exact path="/composition" component={Composition} />
+					<Route exact path="/creatingteam" component={CreatingTeam} />
+					<Route exact path="/registration" component={Registration} />
+					<Route component={Error} />
+				</Switch>
+			</Router>
 		</div>
-	);
+	)
 }
 
-export default App;
+export default App
