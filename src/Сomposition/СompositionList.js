@@ -45,7 +45,7 @@ function СompositionList(props) {
 									<td>{Math.floor(Math.random() * 10)}%</td>
 									<td>
 										<Button
-											type='link'
+											type="link"
 											id={s.button}
 											onClick={() => salePlayers(item)}
 										>

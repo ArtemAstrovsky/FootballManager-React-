@@ -3,10 +3,10 @@ import s from './Home.module.css'
 import { message } from 'antd'
 
 const MatchList = props => {
-	const info2 = props => {
+	const informClub = props => {
 		message.success(
 			<div className={s.clubinfo}>
-				<img src={props.img} alt={props.id} width='100' height='100' />
+				<img src={props.logotype} alt={props.id} width="100" height="100" />
 				<h2> {props.clubName} </h2>
 				<h3>{'Power club : ' + props.force} </h3>
 				<p>
@@ -35,7 +35,7 @@ const MatchList = props => {
 					{props.matchList.map((item, index) => (
 						<tr key={item.id}>
 							<td>{index + 1}</td>
-							<td onClick={() => info2(item)}>{item.clubName}</td>
+							<td onClick={() => informClub(item)}>{item.clubName}</td>
 							<td>{item.game}</td>
 							<td>{item.victory}</td>
 							<td>{item.defeat}</td>

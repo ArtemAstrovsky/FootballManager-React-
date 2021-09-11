@@ -4,11 +4,10 @@ import { useState, useEffect } from 'react'
 function TabloMatches(props) {
 	console.log(props.infoClub)
 	console.log(props.clubOpponent)
+	console.log(props.yourTeam)
 	const [resultsGames, setResultsGames] = useState('')
-	console.log('xxx')
-	console.log(props.infoClub[0])
 	useEffect(() => {
-		fetch('/сhampionshipGames')
+		fetch('/gameChampionship')
 			.then(result => result.json())
 			.then(result => setResultsGames(result))
 	}, [])
@@ -18,7 +17,7 @@ function TabloMatches(props) {
 			<div className={s.game__tablo}>
 				<div className={s.game__command}>
 					<img
-						src={props.yourTeam.img}
+						src={props.yourTeam.logotype}
 						alt={props.yourTeam.id}
 						width="200"
 						height="200"
@@ -28,14 +27,14 @@ function TabloMatches(props) {
 				<div className={s.game__check}>
 					<h2>Match Championship</h2>
 					<p>
-						<span>2</span>
+						<span>{props.goalsFirstTeam}</span>
 						<span>-</span>
-						<span>0</span>
+						<span>{props.goalsSecondTeam}</span>
 					</p>
 				</div>
 				<div className={s.game__command}>
 					<img
-						src={props.infoClub[props.clubOpponent].img}
+						src={props.infoClub[props.clubOpponent].logotype}
 						alt={props.infoClub[props.clubOpponent].id}
 						width="200"
 						height="200"

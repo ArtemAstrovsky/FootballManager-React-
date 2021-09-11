@@ -5,7 +5,7 @@ function YourTeam() {
 	const [yourTeam, setYourTeam] = useState([])
 
 	useEffect(() => {
-		fetch('/yourteam/16')
+		fetch('/teams/16')
 			.then(result => result.json())
 			.then(result => {
 				setYourTeam(result)
@@ -14,7 +14,12 @@ function YourTeam() {
 	return (
 		<div className={s.yourinfo}>
 			<div className={s.yourteam}>
-				<img src={yourTeam.img} alt={yourTeam.id} width='200' height='200' />
+				<img
+					src={yourTeam.logotype}
+					alt={yourTeam.id}
+					width="200"
+					height="200"
+				/>
 				<div className={s.info}>
 					<h1>FC {yourTeam.clubName}</h1>
 					<p>City : {yourTeam.city}</p>
@@ -25,7 +30,7 @@ function YourTeam() {
 				</div>
 			</div>
 			<div className={s.yourteam__img}>
-				<img src='../img/EuropeaLeague.png' alt='' />
+				<img src="../img/EuropeaLeague.png" alt="" />
 			</div>
 		</div>
 	)

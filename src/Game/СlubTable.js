@@ -4,7 +4,7 @@ import Loader from '../Loader/Loader'
 import ClubList from './ClubList'
 
 function ClubTable() {
-	const [clubTable, setСlubtable] = useState([])
+	const [clubTable, setСlubtable] = useState()
 	const [isLoadingClub, setIsLoadingClub] = useState(true)
 
 	useEffect(() => {

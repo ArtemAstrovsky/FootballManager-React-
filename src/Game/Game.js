@@ -6,130 +6,116 @@ import ClubTable from './СlubTable'
 import TabloMatches from './TabloMatches'
 import Loader from '../Loader/Loader'
 
-let round = 1
-
-function Game(props) {
+function Game() {
 	const [isLoading, setIsLoading] = useState(true)
-	const [infoClub, setInfoClub] = useState([
-		{
-			id: 1,
-			clubName: 'Liverpool',
-			img: '/img/Liverpool.png',
-		},
-	])
-	// const [myMatches, setMyMatches] = useState('');
-	const [yourTeam, setYourTeam] = useState([])
+	const [tournamentGrid, setTournamentGrid] = useState()
+	const [round, setRound] = useState(1)
+	const [yourTeam, setYourTeam] = useState('')
 	const [clubOpponent, setClubOpponent] = useState(0)
+	const [goalsFirstTeam, setGoalsFirstTeam] = useState(0)
+	const [goalsSecondTeam, setGoalsSecondTeam] = useState(0)
+	const [infoClub, setInfoClub] = useState({
+		id: 1,
+		clubName: 'Liverpool',
+		logotype: '/img/Liverpool.png',
+	}) // все клубы
 
 	useEffect(() => {
 		fetch('/teams')
 			.then(result => result.json())
 			.then(result => {
-				setIsLoading(false)
 				setInfoClub(result)
+				setYourTeam(result[15]) // Information about your team
+				setIsLoading(false)
 			})
-		fetch('/yourteam/16')
+		fetch('/round')
 			.then(result => result.json())
-			.then(result => setYourTeam(result))
+			.then(result => setRound(result.round))
+		fetch('/tournamentGames')
+			.then(result => result.json())
+			.then(result => setTournamentGrid(result[round]))
 	}, [])
 
-	function games1() {
-		let club1 = [props.сlubGames[round][0][1]].join('')
-		let teamCheck1 = Math.random() * yourTeam.force
-		let teamCheck2 = Math.random() * infoClub[club1 - 1].force
-		setClubOpponent([props.сlubGames[round][0][1]].join(''))
-		if (teamCheck1 >= teamCheck2) {
-			fetch3()
-			fetch2(club1)
-			console.log('xxx')
-		} else {
-			fetch1(club1)
-			fetch4()
-			console.log('x2xx')
+	function сhampionshipGames() {
+		if (round === 15) alert('The tournament is completed ')
+		setRound(round + 1)
+		nextRound() // Round Update
+		for (let i = 0; i < tournamentGrid.length; i++) {
+			let firstClub = tournamentGrid[i][0]
+			let secondClub = tournamentGrid[i][1]
+			let goalsTeamFirst = Math.floor(
+				Math.random() * infoClub[firstClub - 1].force
+			) // Random result of the game (taking into account the force of the team)
+			let goalsTeamSecond = Math.floor(
+				Math.random() * infoClub[secondClub - 1].force
+			) // Random result of the game (taking into account the force of the team)
+			if (firstClub === 16) {
+				setGoalsFirstTeam(Math.floor(goalsTeamFirst / 100))
+				setGoalsSecondTeam(Math.floor(goalsTeamSecond / 100))
+				setClubOpponent(tournamentGrid[i][1])
+			}
+			setTimeout(() => {
+				if (goalsTeamFirst >= goalsTeamSecond) {
+					setTimeout(() => {
+						firstWinnerTeam(firstClub)
+					}, 2500)
+					secondWinnerTeam(secondClub)
+					console.log('x1xx')
+				} else {
+					setTimeout(() => {
+						firstWinnerTeam(firstClub)
+					}, 2500)
+					secondWinnerTeam(secondClub)
+					console.log('x2xx')
+				}
+			}, 3000 * i)
 		}
-		round = round + 1
-		console.log(yourTeam.game)
 	}
-	function fetch3() {
-		fetch('/yourteam/16', {
+
+	function firstWinnerTeam(firstClub) {
+		fetch('/teams/' + firstClub, {
 			method: 'PUT',
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({
-				...yourTeam,
-				game: yourTeam.game + 1,
-				victory: yourTeam.victory + 1,
-				glasses: yourTeam.glasses + 3,
-				// сhampionshipGames: (yourTeam.сhampionshipGames[round] = 'win'),
+				...infoClub[firstClub - 1],
+				game: infoClub[firstClub - 1].game + 1,
+				victory: infoClub[firstClub - 1].victory + 1,
+				glasses: infoClub[firstClub - 1].glasses + 3,
 			}),
 		})
 	}
-	function fetch4() {
-		fetch('/yourteam/16', {
+	function secondWinnerTeam(secondClub) {
+		fetch('/teams/' + secondClub, {
 			method: 'PUT',
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({
-				...yourTeam,
-				game: yourTeam.game + 1,
-				defeat: yourTeam.defeat + 1,
-				// сhampionshipGames: (yourTeam.сhampionshipGames[round] = 'losing'),
+				...infoClub[secondClub - 1],
+				game: infoClub[secondClub - 1].game + 1,
+				defeat: infoClub[secondClub - 1].defeat + 1,
+				glasses: infoClub[secondClub - 1].glasses + 1,
 			}),
 		})
 	}
 
-	// function games() {
-	// for (let i = 0; i < 6; i++) {
-	// 	let club1 = [props.otherGames[round][i][0]].join('')
-	// 	let club2 = [props.otherGames[round][i][1]].join('')
-	// 	let teamCheck1 = Math.random() * 10
-	// 	let teamCheck2 = Math.random() * 10
-	// 	console.log(club1)
-	// 	console.log(club2)
-	// 	console.log(infoClub[club1 - 1], infoClub[club2 - 1])
-	// 	if (teamCheck1 >= teamCheck2) {
-	// 		fetch1(club1)
-	// 		fetch2(club2)
-	// 	} else {
-	// 		fetch1(club2)
-	// 		fetch2(club1)
-	// 	}
-	//	 }
-	// }
-	function fetch1(club) {
-		fetch('/teams/' + club, {
+	function nextRound() {
+		// transition to the next round
+		fetch('/round', {
 			method: 'PUT',
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({
-				...infoClub[club - 1],
-				game: infoClub[club - 1].game + 1,
-				victory: infoClub[club - 1].victory + 1,
-				glasses: infoClub[club - 1].glasses + 3,
+				round: round + 1,
 			}),
 		})
 	}
-	function fetch2(club) {
-		fetch('/teams/' + club, {
-			method: 'PUT',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				...infoClub[club - 1],
-				game: infoClub[club - 1].game + 1,
-				defeat: infoClub[club - 1].defeat + 1,
-			}),
-		})
-	}
-
 	return (
 		<div className={s.game}>
 			<div className={s.game__conteiner}>
@@ -137,12 +123,18 @@ function Game(props) {
 					<Loader />
 				) : (
 					<TabloMatches
+						goalsFirstTeam={goalsFirstTeam}
+						goalsSecondTeam={goalsSecondTeam}
 						yourTeam={yourTeam}
 						clubOpponent={clubOpponent}
 						infoClub={infoClub}
 					/>
 				)}
-				<Button className={s.game__button} onClick={games1} type="primary">
+				<Button
+					className={s.game__button}
+					onClick={сhampionshipGames}
+					type="primary"
+				>
 					Game
 				</Button>
 			</div>

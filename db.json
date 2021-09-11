@@ -4,12 +4,12 @@
       "id": 1,
       "clubName": "Liverpool",
       "force": 1790,
-      "img": "/img/Liverpool.png",
-      "game": 2,
-      "victory": 1,
+      "logotype": "/img/Liverpool.png",
+      "game": 11,
+      "victory": 0,
       "draw": 0,
-      "defeat": 1,
-      "glasses": 3,
+      "defeat": 11,
+      "glasses": 9,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 1,
@@ -20,12 +20,12 @@
       "id": 2,
       "clubName": "Manchester United",
       "force": 1690,
-      "img": "/img/ManchesterUnited.png",
-      "game": 0,
-      "victory": 0,
+      "logotype": "/img/ManchesterUnited.png",
+      "game": 11,
+      "victory": 9,
       "draw": 0,
-      "defeat": 1,
-      "glasses": 0,
+      "defeat": 2,
+      "glasses": 29,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 1,
@@ -36,12 +36,12 @@
       "id": 3,
       "clubName": "Manchester City",
       "force": 1800,
-      "img": "/img/ManchesterCity.png",
-      "game": 0,
-      "victory": 0,
+      "logotype": "/img/ManchesterCity.png",
+      "game": 11,
+      "victory": 9,
       "draw": 0,
-      "defeat": 0,
-      "glasses": 0,
+      "defeat": 2,
+      "glasses": 29,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 1,
@@ -52,12 +52,12 @@
       "id": 4,
       "clubName": "Chelsea",
       "force": 1690,
-      "img": "/img/Chelsea.png",
-      "game": 0,
-      "victory": 0,
+      "logotype": "/img/Chelsea.png",
+      "game": 11,
+      "victory": 10,
       "draw": 0,
-      "defeat": 0,
-      "glasses": 0,
+      "defeat": 1,
+      "glasses": 31,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 1,
@@ -68,12 +68,12 @@
       "id": 5,
       "clubName": "Valencia",
       "force": 1590,
-      "img": "/img/Valencia.png",
-      "game": 0,
-      "victory": 0,
+      "logotype": "/img/Valencia.png",
+      "game": 11,
+      "victory": 11,
       "draw": 0,
       "defeat": 0,
-      "glasses": 0,
+      "glasses": 33,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 1,
@@ -84,12 +84,12 @@
       "id": 6,
       "clubName": "Arsenal",
       "force": 1660,
-      "img": "/img/Arsenal.png",
-      "game": 0,
-      "victory": 0,
+      "logotype": "/img/Arsenal.png",
+      "game": 11,
+      "victory": 11,
       "draw": 0,
       "defeat": 0,
-      "glasses": 0,
+      "glasses": 33,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 1,
@@ -100,12 +100,12 @@
       "id": 7,
       "clubName": "Everton",
       "force": 1540,
-      "img": "/img/Everton.png",
-      "game": 0,
-      "victory": 0,
+      "logotype": "/img/Everton.png",
+      "game": 11,
+      "victory": 11,
       "draw": 0,
       "defeat": 0,
-      "glasses": 0,
+      "glasses": 33,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 1,
@@ -116,12 +116,12 @@
       "id": 8,
       "clubName": "Crystal Pelas",
       "force": 1450,
-      "img": "/img/CrystalPelas.png",
-      "game": 0,
-      "victory": 0,
+      "logotype": "/img/CrystalPelas.png",
+      "game": 11,
+      "victory": 11,
       "draw": 0,
       "defeat": 0,
-      "glasses": 0,
+      "glasses": 33,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 1,
@@ -132,12 +132,12 @@
       "id": 9,
       "clubName": "Blackburn Rovers",
       "force": 1370,
-      "img": "/img/BlackburnRovers.png",
-      "game": 0,
-      "victory": 0,
+      "logotype": "/img/BlackburnRovers.png",
+      "game": 11,
+      "victory": 2,
       "draw": 0,
-      "defeat": 0,
-      "glasses": 0,
+      "defeat": 9,
+      "glasses": 13,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 1,
@@ -148,12 +148,12 @@
       "id": 10,
       "clubName": "Aston Villa",
       "force": 1500,
-      "img": "/img/AstonVilla.png",
-      "game": 0,
-      "victory": 0,
+      "logotype": "/img/AstonVilla.png",
+      "game": 11,
+      "victory": 2,
       "draw": 0,
-      "defeat": 0,
-      "glasses": 0,
+      "defeat": 9,
+      "glasses": 13,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 1,
@@ -164,12 +164,12 @@
       "id": 11,
       "clubName": "Bavaria",
       "force": 1690,
-      "img": "/img/Bavaria.png",
-      "game": 0,
-      "victory": 0,
+      "logotype": "/img/Bavaria.png",
+      "game": 11,
+      "victory": 1,
       "draw": 0,
-      "defeat": 0,
-      "glasses": 0,
+      "defeat": 10,
+      "glasses": 11,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 1,
@@ -180,12 +180,12 @@
       "id": 12,
       "clubName": "Koln",
       "force": 1460,
-      "img": "/img/Koln.png",
-      "game": 0,
+      "logotype": "/img/Koln.png",
+      "game": 11,
       "victory": 0,
       "draw": 0,
-      "defeat": 0,
-      "glasses": 0,
+      "defeat": 11,
+      "glasses": 9,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 1,
@@ -196,12 +196,12 @@
       "id": 13,
       "clubName": "Real Madrid",
       "force": 1800,
-      "img": "/img/RealMadrid.png",
-      "game": 0,
+      "logotype": "/img/RealMadrid.png",
+      "game": 11,
       "victory": 0,
       "draw": 0,
-      "defeat": 0,
-      "glasses": 0,
+      "defeat": 11,
+      "glasses": 9,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 1,
@@ -212,12 +212,12 @@
       "id": 14,
       "clubName": "Barcelona",
       "force": 1750,
-      "img": "/img/Barcelona.png",
-      "game": 0,
+      "logotype": "/img/Barcelona.png",
+      "game": 11,
       "victory": 0,
       "draw": 0,
-      "defeat": 0,
-      "glasses": 0,
+      "defeat": 11,
+      "glasses": 9,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 1,
@@ -228,12 +228,12 @@
       "id": 15,
       "clubName": "Bayer Leverkusen",
       "force": 1650,
-      "img": "/img/BayerLeverkusen.png",
-      "game": 0,
+      "logotype": "/img/BayerLeverkusen.png",
+      "game": 11,
       "victory": 0,
       "draw": 0,
-      "defeat": 0,
-      "glasses": 0,
+      "defeat": 11,
+      "glasses": 9,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 1,
@@ -245,11 +245,11 @@
       "clubName": "PSG",
       "force": 1600,
       "logotype": "../img/Club3.png",
-      "game": 2,
-      "victory": 2,
+      "game": 11,
+      "victory": 11,
       "draw": 0,
       "defeat": 0,
-      "glasses": 6,
+      "glasses": 33,
       "money": 0,
       "numberofplayers": 0,
       "difficulty": 40000000,
@@ -275,7 +275,10 @@
       "form": 1
     }
   ],
-  "сhampionshipGames": {
+  "round": {
+    "round": 10
+  },
+  "gameChampionship": {
     "1": "",
     "2": "",
     "3": "",
@@ -290,8 +293,7 @@
     "12": "",
     "13": "",
     "14": "",
-    "15": "",
-    "round": ""
+    "15": ""
   },
   "playres": [
     {
@@ -675,5 +677,517 @@
       "img": "/img/player3.png"
     }
   ],
-  "yourplayes": []
+  "yourplayes": [],
+  "tournamentGames": {
+    "1": [
+      [
+        16,
+        1
+      ],
+      [
+        2,
+        15
+      ],
+      [
+        3,
+        14
+      ],
+      [
+        4,
+        13
+      ],
+      [
+        5,
+        12
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        8,
+        11
+      ]
+    ],
+    "2": [
+      [
+        16,
+        9
+      ],
+      [
+        10,
+        8
+      ],
+      [
+        11,
+        7
+      ],
+      [
+        12,
+        6
+      ],
+      [
+        13,
+        5
+      ],
+      [
+        14,
+        4
+      ],
+      [
+        15,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3": [
+      [
+        16,
+        2
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        15
+      ],
+      [
+        5,
+        14
+      ],
+      [
+        6,
+        13
+      ],
+      [
+        7,
+        12
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        9,
+        10
+      ]
+    ],
+    "4": [
+      [
+        16,
+        10
+      ],
+      [
+        11,
+        9
+      ],
+      [
+        12,
+        8
+      ],
+      [
+        13,
+        7
+      ],
+      [
+        14,
+        6
+      ],
+      [
+        15,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "5": [
+      [
+        16,
+        3
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        6,
+        15
+      ],
+      [
+        7,
+        14
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        9,
+        12
+      ],
+      [
+        10,
+        11
+      ]
+    ],
+    "6": [
+      [
+        16,
+        11
+      ],
+      [
+        12,
+        10
+      ],
+      [
+        13,
+        9
+      ],
+      [
+        14,
+        8
+      ],
+      [
+        15,
+        7
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "7": [
+      [
+        16,
+        4
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        8,
+        15
+      ],
+      [
+        9,
+        14
+      ],
+      [
+        10,
+        13
+      ],
+      [
+        11,
+        12
+      ]
+    ],
+    "8": [
+      [
+        16,
+        12
+      ],
+      [
+        13,
+        11
+      ],
+      [
+        14,
+        10
+      ],
+      [
+        15,
+        9
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "9": [
+      [
+        16,
+        5
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        8,
+        2
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        10,
+        15
+      ],
+      [
+        11,
+        14
+      ],
+      [
+        12,
+        13
+      ]
+    ],
+    "10": [
+      [
+        16,
+        13
+      ],
+      [
+        14,
+        12
+      ],
+      [
+        15,
+        11
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "11": [
+      [
+        16,
+        6
+      ],
+      [
+        7,
+        5
+      ],
+      [
+        8,
+        4
+      ],
+      [
+        9,
+        3
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        11,
+        1
+      ],
+      [
+        12,
+        15
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "12": [
+      [
+        16,
+        14
+      ],
+      [
+        15,
+        13
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        3,
+        10
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "13": [
+      [
+        16,
+        7
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        4
+      ],
+      [
+        11,
+        3
+      ],
+      [
+        12,
+        2
+      ],
+      [
+        13,
+        1
+      ],
+      [
+        14,
+        15
+      ]
+    ],
+    "14": [
+      [
+        16,
+        15
+      ],
+      [
+        1,
+        14
+      ],
+      [
+        2,
+        13
+      ],
+      [
+        3,
+        12
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    "15": [
+      [
+        16,
+        8
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        10,
+        6
+      ],
+      [
+        11,
+        5
+      ],
+      [
+        12,
+        4
+      ],
+      [
+        13,
+        3
+      ],
+      [
+        14,
+        2
+      ],
+      [
+        15,
+        1
+      ]
+    ]
+  }
 }
