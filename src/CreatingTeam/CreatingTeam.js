@@ -2,27 +2,31 @@ import s from './CreatingTeam.module.css'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Row, Col, Button } from 'antd'
-import FormSelection from './FormSelection'
-import LogoSelection from './LogoSelection'
+import Uniform from './Uniform'
+import Logotype from './Logotype'
 import СityСlubСhoice from './СityСlubСhoice'
+import { useHistory } from 'react-router-dom'
+import { message } from 'antd'
 
 const CreatingTeam = props => {
 	// изменить название
 	const [city, setCity] = useState('')
-	const [teamName, setTeamName] = useState('')
-	const [selectedForm, setSelectedForm] = useState(1)
-	const [selectedLogo, setSelectedLogo] = useState(6)
-	const [selectedDifficulty, setSelectedDifficulty] = useState(1)
+	const [clubName, setClubName] = useState('')
+	const [uniform, setUniform] = useState(1)
+	const [logotype, setLogotype] = useState(6)
+	const [difficulty, setDifficulty] = useState(1)
 	const [yourTeam, setYourTeam] = useState([])
+	let history = useHistory()
 
 	useEffect(() => {
-		fetch('/yourteam/1')
+		fetch('/teams/16')
 			.then(result => result.json())
 			.then(result => setYourTeam(result))
 	}, [])
 
-	function inform(props) {
-		fetch('/yourteam/1', {
+	function infoClub() {
+		//  Loading to the server selected command data
+		fetch('/teams/16', {
 			method: 'PUT',
 			headers: {
 				Accept: 'application/json',
@@ -30,52 +34,55 @@ const CreatingTeam = props => {
 			},
 			body: JSON.stringify({
 				...yourTeam,
-				clubName: teamName,
-				difficulty: selectedDifficulty,
-				city: city,
-				img: selectedLogo,
-				form: selectedForm,
+				clubName,
+				difficulty,
+				city,
+				logotype,
+				uniform,
 			}),
+		}).then(r => {
+			history.push('/')
+			message.success(`Team ${clubName} has been created`)
 		})
 	}
 
 	return (
 		<div className={s.container}>
 			<div className={s.header}>
-				<img src='../img/logo.png' alt='' />
+				<img src="../img/logo.png" alt="" />
 				<div className={s.header__title}>
 					<h1>FOOTBALL MANAGER IТ FOOTBALL</h1>
 					<p>Create a dream team and bring it to victory </p>
 				</div>
-				<img src='../img/Cup6.png' alt='' />
+				<img src="../img/Cup6.png" alt="" />
 			</div>
 			<div className={s.creating}>
 				<Row>
 					<Col className={s.creating__col} span={11}>
 						<СityСlubСhoice
 							setCity={setCity}
-							setTeamName={setTeamName}
-							setSelectedDifficulty={setSelectedDifficulty}
-							selectedDifficulty={selectedDifficulty}
+							setClubName={setClubName}
+							setDifficulty={setDifficulty}
+							difficulty={difficulty}
 						/>
 						<div className={s.creating__button}>
-							<Button id={s.button} onClick={inform} type='primary'>
+							<Button id={s.button} onClick={infoClub} type="primary">
 								Create a team
 							</Button>
 						</div>
 					</Col>
 					<Col className={s.creating__col} span={11}>
 						<div>
-							<FormSelection
+							<Uniform
 								className={s.selects}
-								selectedForm={selectedForm}
-								setSelectedForm={setSelectedForm}
+								uniform={uniform}
+								setUniform={setUniform}
 								form={props.form}
 							/>
-							<LogoSelection
+							<Logotype
 								className={s.selects}
-								setSelectedLogo={setSelectedLogo}
-								selectedLogo={selectedLogo}
+								setLogotype={setLogotype}
+								logotype={logotype}
 								logo={props.logo}
 							/>
 						</div>
