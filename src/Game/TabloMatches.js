@@ -2,9 +2,9 @@ import s from './Game.module.css'
 import { useState, useEffect } from 'react'
 
 function TabloMatches(props) {
-	console.log(props.infoClub)
-	console.log(props.clubOpponent)
-	console.log(props.yourTeam)
+	// console.log(props.infoClub)
+	// console.log(props.clubOpponent)
+	// console.log(props.yourTeam)
 	const [resultsGames, setResultsGames] = useState('')
 	useEffect(() => {
 		fetch('/gameChampionship')

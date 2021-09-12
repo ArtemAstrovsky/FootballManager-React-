@@ -7,18 +7,54 @@ import TabloMatches from './TabloMatches'
 import Loader from '../Loader/Loader'
 
 function Game() {
+	const listTournamentTeams = [
+		1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+	]
 	const [isLoading, setIsLoading] = useState(true)
-	const [tournamentGrid, setTournamentGrid] = useState()
-	const [round, setRound] = useState(1)
+	const [round, setRound] = useState(1) // The round number that is played now
 	const [yourTeam, setYourTeam] = useState('')
-	const [clubOpponent, setClubOpponent] = useState(0)
+	const [clubOpponent, setClubOpponent] = useState(0) // Club rival id
 	const [goalsFirstTeam, setGoalsFirstTeam] = useState(0)
 	const [goalsSecondTeam, setGoalsSecondTeam] = useState(0)
 	const [infoClub, setInfoClub] = useState({
 		id: 1,
 		clubName: 'Liverpool',
 		logotype: '/img/Liverpool.png',
-	}) // все клубы
+	})
+
+	function schedule(array, round) {
+		if (!round) {
+			var teams = array.length,
+				halfTour = teams - 1,
+				totalRounds = halfTour * 2,
+				matchesPerRound = teams / 2,
+				matches = [],
+				rounds = [],
+				match,
+				home,
+				away,
+				swap
+			for (round = 0; round < totalRounds; round++) {
+				matches = []
+				for (match = 0; match < matchesPerRound; match++) {
+					home = (round + match) % (teams - 1)
+					away = (teams - 1 - match + round) % (teams - 1)
+					if (match === 0) {
+						away = teams - 1
+					}
+					if (round >= halfTour) {
+						swap = home
+						home = away
+						away = swap
+					}
+					matches.push([array[home], array[away]])
+				}
+				rounds.push(matches)
+			}
+			return rounds
+		}
+		return schedule(array)[round - 1]
+	}
 
 	useEffect(() => {
 		fetch('/teams')
@@ -31,18 +67,17 @@ function Game() {
 		fetch('/round')
 			.then(result => result.json())
 			.then(result => setRound(result.round))
-		fetch('/tournamentGames')
-			.then(result => result.json())
-			.then(result => setTournamentGrid(result[round]))
 	}, [])
 
 	function сhampionshipGames() {
-		if (round === 15) alert('The tournament is completed ')
+		if (round === 30) alert('The tournament is completed ')
+		let scheduleRound = schedule(listTournamentTeams, round)
+		console.log(scheduleRound)
 		setRound(round + 1)
 		nextRound() // Round Update
-		for (let i = 0; i < tournamentGrid.length; i++) {
-			let firstClub = tournamentGrid[i][0]
-			let secondClub = tournamentGrid[i][1]
+		for (let i = 0; i < scheduleRound.length; i++) {
+			let firstClub = scheduleRound[i][0]
+			let secondClub = scheduleRound[i][1]
 			let goalsTeamFirst = Math.floor(
 				Math.random() * infoClub[firstClub - 1].force
 			) // Random result of the game (taking into account the force of the team)
@@ -52,7 +87,12 @@ function Game() {
 			if (firstClub === 16) {
 				setGoalsFirstTeam(Math.floor(goalsTeamFirst / 100))
 				setGoalsSecondTeam(Math.floor(goalsTeamSecond / 100))
-				setClubOpponent(tournamentGrid[i][1])
+				setClubOpponent(secondClub)
+			}
+			if (secondClub === 16) {
+				setGoalsFirstTeam(Math.floor(goalsTeamSecond / 100))
+				setGoalsSecondTeam(Math.floor(goalsTeamFirst / 100))
+				setClubOpponent(firstClub)
 			}
 			setTimeout(() => {
 				if (goalsTeamFirst >= goalsTeamSecond) {
@@ -63,9 +103,9 @@ function Game() {
 					console.log('x1xx')
 				} else {
 					setTimeout(() => {
-						firstWinnerTeam(firstClub)
+						firstWinnerTeam(secondClub)
 					}, 2500)
-					secondWinnerTeam(secondClub)
+					secondWinnerTeam(firstClub)
 					console.log('x2xx')
 				}
 			}, 3000 * i)
