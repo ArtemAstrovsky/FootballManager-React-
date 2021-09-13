@@ -5,6 +5,7 @@ import { Button } from 'antd'
 import ClubTable from './СlubTable'
 import TabloMatches from './TabloMatches'
 import Loader from '../Loader/Loader'
+import { Alert, message } from 'antd'
 
 function Game() {
 	const listTournamentTeams = [
@@ -21,6 +22,15 @@ function Game() {
 		clubName: 'Liverpool',
 		logotype: '/img/Liverpool.png',
 	})
+
+	const сompletionRown = () => {
+		message
+			.loading('Go games Round ..', 16.5)
+			.then(() => message.success('Rounds are played', 4.5))
+			.then(() =>
+				message.info('Congratulations to the winners of the game ', 2.5)
+			)
+	}
 
 	function schedule(array, round) {
 		if (!round) {
@@ -75,6 +85,7 @@ function Game() {
 		console.log(scheduleRound)
 		setRound(round + 1)
 		nextRound() // Round Update
+		сompletionRown()
 		for (let i = 0; i < scheduleRound.length; i++) {
 			let firstClub = scheduleRound[i][0]
 			let secondClub = scheduleRound[i][1]
@@ -98,17 +109,17 @@ function Game() {
 				if (goalsTeamFirst >= goalsTeamSecond) {
 					setTimeout(() => {
 						firstWinnerTeam(firstClub)
-					}, 2500)
+					}, 2200)
 					secondWinnerTeam(secondClub)
 					console.log('x1xx')
 				} else {
 					setTimeout(() => {
 						firstWinnerTeam(secondClub)
-					}, 2500)
+					}, 2200)
 					secondWinnerTeam(firstClub)
 					console.log('x2xx')
 				}
-			}, 3000 * i)
+			}, 2500 * i)
 		}
 	}
 
@@ -178,6 +189,16 @@ function Game() {
 					Game
 				</Button>
 			</div>
+			{/* <Alert
+				message="Success Tips"
+				description="You can spend a certain amount for the preparation of the player at the Academy, 
+					its characteristics and the price will be yearbly generated, and later it will be possible to sell it. 
+					For each game to your account will be the prize money, use them to strengthen the composition (buying new players), 
+					the update of the stadium (more funds will be received for the victory) and to train new team players. "
+				type="info"
+				showIcon
+				closable
+			/> */}
 			<div className={s.clublist__conteiner}>
 				<div className={s.game__clubtable}>
 					<h1>Match schedule</h1>
