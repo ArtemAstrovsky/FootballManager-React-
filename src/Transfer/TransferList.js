@@ -3,7 +3,7 @@ import PlayerList from './PlayerList'
 import Loader from '../Loader/Loader'
 
 function TransferList(props) {
-	const [transferList, setTransferList] = useState([])
+	const [transferList, setTransferList] = useState('')
 	const [isLoading, setIsLoading] = useState(true)
 
 	useEffect(() => {
@@ -20,7 +20,12 @@ function TransferList(props) {
 			{isLoading ? (
 				<Loader />
 			) : (
-				<PlayerList transferList={transferList} balanse={props.balanse} />
+				<PlayerList
+					transferList={transferList}
+					teamFormation={props.teamFormation}
+					balanceTeam={props.balanceTeam}
+					setBalanceTeam={props.setBalanceTeam}
+				/>
 			)}
 		</div>
 	)

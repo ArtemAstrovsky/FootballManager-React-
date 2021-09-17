@@ -1,55 +1,27 @@
 import React from 'react'
 import { Button } from 'antd'
 import s from './Transfer.module.css'
-import { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
+import { message } from 'antd'
 
 const PlayerList = props => {
-	const [playerPrice, setPlayerPrice] = useState('')
-	const [yourTeam, setYourTeam] = useState([])
-	// const [restMoney, setRestMoney] = useState(props.balanse)
-
-	useEffect(() => {
-		fetch('/yourteam/16')
-			.then(result => result.json())
-			.then(result => setYourTeam(result))
-	}, [])
+	let history = useHistory()
+	const idMyTeam = 16
 
 	function payPlayers(player) {
-		fetch('/playres/' + player.id)
-			.then(result => result.json())
-			.then(result => {
-				setPlayerPrice(result.price)
-				console.log(result.price)
-				console.log('1')
-				if (props.balanse > playerPrice) {
-					console.log(playerPrice)
-					console.log('2')
-					let question = window.confirm(
-						'Are you sure you want to purchase a player?'
-					)
-					if (question === true) buyPlayer(player)
-				} else alert('Not enough money')
-			})
+		let newBalanceTeam = 0
+		if (props.balanceTeam > player.price) {
+			let question = window.confirm(
+				'Are you sure you want to purchase a player?'
+			)
+			if (question === true) {
+				props.setBalanceTeam(props.balanceTeam - player.price)
+				buyPlayer(player)
+			}
+		} else alert('Not enough money')
 	}
 
 	function buyPlayer(player) {
-		// setRestMoney = (restMoney - playerPrice)
-		let balanse = props.balanse - playerPrice
-		console.log(player)
-		console.log(balanse)
-		console.log('3')
-		fetch('/playres/' + player.id, {
-			method: 'PUT',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				...player,
-				playerStatus: !player.playerStatus,
-				difficulty: balanse,
-			}),
-		})
 		fetch('/playres/' + player.id, {
 			method: 'PUT',
 			headers: {
@@ -61,26 +33,31 @@ const PlayerList = props => {
 				playerStatus: !player.playerStatus,
 			}),
 		})
-		fetch('/yourteam/16', {
+		console.log(props.teamFormation)
+		console.log(props.balanceTeam)
+		fetch('/teams/' + idMyTeam, {
 			method: 'PUT',
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({
-				...yourTeam,
-				difficulty: balanse,
+				...props.teamFormation,
+				difficulty: props.balanceTeam - player.price,
 			}),
+		}).then(r => {
+			history.push('/composition')
+			message.success(`Player successfully purchased `)
 		})
 	}
 
 	return (
 		<div className={s.headerlist}>
 			{props.transferList.map(item => (
-				<div className={s.wrapper}>
+				<div key={item.id} className={s.wrapper}>
 					<div className={[s.card__wrapper, s.first].join(' ')}>
 						<div className={s.front__card}>
-							<img src={item.img} alt={item.it} width='100' height='100' />
+							<img src={item.img} alt={item.it} width="100" height="100" />
 							<h2> {item.playerName} </h2>
 							<p>{'Power player : ' + item.force} </p>
 							<p>{'The Former club : ' + item.pastClub} </p>
@@ -93,14 +70,14 @@ const PlayerList = props => {
 							<h2>{item.price + '$'}</h2>
 							{item.playerStatus ? (
 								<Button
-									type='link'
+									type="link"
 									id={s.button}
 									onClick={() => payPlayers(item)}
 								>
 									Buy player
 								</Button>
 							) : (
-								<Button type='link' id={s.button} disabled>
+								<Button type="link" id={s.button} disabled>
 									Player Sold
 								</Button>
 							)}
@@ -127,3 +104,21 @@ export default PlayerList
 // 	</tr>
 // ))}
 // </tbody>
+
+// function payPlayers(player) {
+// 	fetch('/playres/' + player.id)
+// 		.then(result => result.json())
+// 		.then(result => {
+// 			setPlayerPrice(result.price)
+// 			console.log(result.price)
+// 			console.log('1')
+// 			if (restMoney > playerPrice) {
+// 				console.log(playerPrice)
+// 				console.log('2')
+// 				let question = window.confirm(
+// 					'Are you sure you want to purchase a player?'
+// 				)
+// 				if (question === true) buyPlayer(player)
+// 			} else alert('Not enough money')
+// 		})
+// }
