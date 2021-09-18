@@ -46,7 +46,7 @@ const PlayerList = props => {
 				difficulty: props.balanceTeam - player.price,
 			}),
 		}).then(r => {
-			history.push('/composition')
+			history.push('/clubplayers')
 			message.success(`Player successfully purchased `)
 		})
 	}

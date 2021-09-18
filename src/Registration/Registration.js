@@ -9,12 +9,12 @@ const Registration = () => {
 			<div>
 				<div className={[s.container, s.fon1].join(' ')}>
 					<div className={s.header}>
-						<img src='../img/logo.png' alt='' />
+						<img src="../img/logo.png" alt="" />
 						<div className={s.header__btm}>
-							<Button id={s.header__button} type='primary'>
+							<Button id={s.header__button} type="primary">
 								ENTRANCE TO YOURS
 							</Button>
-							<Button id={s.header__button2} type='primary'>
+							<Button id={s.header__button2} type="primary">
 								REGISTRATION
 							</Button>
 						</div>
@@ -25,8 +25,8 @@ const Registration = () => {
 							Create a dream team and bring it to victory <br /> free online
 							game.{' '}
 						</p>
-						<Button id={s.button} type='primary'>
-							<Link to='/creatingteam'>CREATE A TEAM</Link>
+						<Button id={s.button} type="primary">
+							<Link to="/registrationteam">CREATE A TEAM</Link>
 						</Button>
 					</div>
 				</div>
@@ -44,8 +44,8 @@ const Registration = () => {
 							not famous football club to the manager of one of the top teams of
 							his championship.{' '}
 						</p>
-						<Button id={s.button} type='primary'>
-							<Link to='/creatingteam'>CREATE A TEAM</Link>
+						<Button id={s.button} type="primary">
+							<Link to="/registrationteam">CREATE A TEAM</Link>
 						</Button>
 					</div>
 				</div>
@@ -67,8 +67,8 @@ const Registration = () => {
 							highest league of the <br />
 							chosen championship.{' '}
 						</p>
-						<Button id={s.button} type='primary'>
-							<Link to='/creatingteam'>CREATE A TEAM</Link>
+						<Button id={s.button} type="primary">
+							<Link to="/registrationteam">CREATE A TEAM</Link>
 						</Button>
 					</div>
 				</div>

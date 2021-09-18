@@ -1,9 +1,14 @@
 import { Drawer, Button, Space, Statistic } from 'antd'
 import React from 'react'
 import { MenuOutlined } from '@ant-design/icons'
+import ResetAllSettings from './ResetAllSettings'
 // import s from './Header.module.css'
 
 class DropDownMenu extends React.Component {
+	constructor(props) {
+		super(props)
+		this.settingsReset = this.props.settingsReset
+	}
 	state = {
 		visible: false,
 		placement: 'left',
@@ -19,7 +24,6 @@ class DropDownMenu extends React.Component {
 			visible: false,
 		})
 	}
-
 	onChange = e => {
 		this.setState({
 			placement: e.target.value,
@@ -32,21 +36,28 @@ class DropDownMenu extends React.Component {
 			<>
 				<Space>
 					<Button
-						type='primary'
+						type="primary"
 						onClick={this.showDrawer}
 						icon={<MenuOutlined />}
 					></Button>
 				</Space>
 				<Drawer
-					title={<Statistic title='Balance' prefix='$' value={3345.08} />}
+					title={
+						<Statistic
+							title="Balance"
+							prefix="$"
+							value={this.props.balanceTeam}
+						/>
+					}
 					placement={placement}
 					closable={false}
 					onClose={this.onClose}
 					visible={visible}
 					key={placement}
 				>
-					<p>Some contents...</p>
-					<p>Some contents...</p>
+					<p>
+						<ResetAllSettings />
+					</p>
 					<p>Some contents...</p>
 				</Drawer>
 			</>

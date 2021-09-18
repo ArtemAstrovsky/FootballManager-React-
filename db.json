@@ -242,7 +242,7 @@
     },
     {
       "id": 16,
-      "clubName": "42342",
+      "clubName": "sgfsfgdsfg",
       "force": 1200,
       "logotype": "../img/Club7.png",
       "game": 4,
@@ -252,9 +252,9 @@
       "glasses": 10,
       "money": 40000000,
       "numberofplayers": 0,
-      "difficulty": 1138316111,
-      "city": "234234",
-      "uniform": "../img/form6.png"
+      "difficulty": 120000000,
+      "city": "gfsdfg",
+      "uniform": 1
     }
   ],
   "yourteam": [
@@ -275,8 +275,11 @@
       "form": 1
     }
   ],
+  "registration": {
+    "registration": false
+  },
   "round": {
-    "round": 11
+    "round": 1
   },
   "gameChampionship": {
     "1": "",
@@ -359,7 +362,7 @@
       "pastClub": "Manchester city",
       "force": 78,
       "price": 10700000,
-      "playerStatus": true,
+      "playerStatus": false,
       "img": "/img/player2.png"
     },
     {

@@ -30,8 +30,6 @@ let state = {
 		{ link: '/clubplayers', text: 'Club players' },
 		{ link: '/rent-stadium ', text: 'Rent a stadium' },
 		{ link: '/academy-club ', text: 'Academy of Club' },
-		{ link: '/registrationteam', text: 'Create a team' },
-		{ link: '/registration', text: 'Registration' },
 	],
 }
 

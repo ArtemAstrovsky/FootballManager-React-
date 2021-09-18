@@ -24,7 +24,17 @@ const RegistrationTeam = props => {
 			.then(result => setYourTeam(result))
 	}, [])
 
-	function infoClub() {
+	function saveInformationClub() {
+		fetch('/registration', {
+			method: 'PUT',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				registration: true,
+			}),
+		})
 		//  Loading to the server selected command data
 		fetch('/teams/' + idMyTeam, {
 			method: 'PUT',
@@ -66,7 +76,11 @@ const RegistrationTeam = props => {
 							difficulty={difficulty}
 						/>
 						<div className={s.creating__button}>
-							<Button id={s.button} onClick={infoClub} type="primary">
+							<Button
+								id={s.button}
+								onClick={saveInformationClub}
+								type="primary"
+							>
 								Registration of team
 							</Button>
 						</div>

@@ -3,8 +3,10 @@ import React, { useEffect, useState } from 'react'
 import Loader from '../Loader/Loader'
 import YourTeam from './YourTeam'
 import MatchList from './MatchList'
+import { useHistory } from 'react-router-dom'
 
 function Home() {
+	let history = useHistory()
 	const [match, setMatch] = useState([])
 	const [isLoading, setIsLoading] = useState(true)
 
@@ -14,6 +16,13 @@ function Home() {
 			.then(result => {
 				setMatch(result)
 				setIsLoading(false)
+			})
+		fetch('/registration')
+			.then(result => result.json())
+			.then(result => {
+				if (result.registration === false) {
+					history.push('/registration')
+				}
 			})
 	}, [])
 
