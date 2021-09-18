@@ -1,4 +1,4 @@
-import s from './CreatingTeam.module.css'
+import s from './RegistrationTeam.module.css'
 import React from 'react'
 import { Radio } from 'antd'
 

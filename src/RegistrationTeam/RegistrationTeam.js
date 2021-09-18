@@ -1,4 +1,4 @@
-import s from './CreatingTeam.module.css'
+import s from './RegistrationTeam.module.css'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Row, Col, Button } from 'antd'
@@ -8,8 +8,8 @@ import СityСlubСhoice from './СityСlubСhoice'
 import { useHistory } from 'react-router-dom'
 import { message } from 'antd'
 
-const CreatingTeam = props => {
-	// изменить название
+const RegistrationTeam = props => {
+	const idMyTeam = 16
 	const [city, setCity] = useState('')
 	const [clubName, setClubName] = useState('')
 	const [uniform, setUniform] = useState(1)
@@ -19,14 +19,14 @@ const CreatingTeam = props => {
 	let history = useHistory()
 
 	useEffect(() => {
-		fetch('/teams/16')
+		fetch('/teams/' + idMyTeam)
 			.then(result => result.json())
 			.then(result => setYourTeam(result))
 	}, [])
 
 	function infoClub() {
 		//  Loading to the server selected command data
-		fetch('/teams/16', {
+		fetch('/teams/' + idMyTeam, {
 			method: 'PUT',
 			headers: {
 				Accept: 'application/json',
@@ -67,7 +67,7 @@ const CreatingTeam = props => {
 						/>
 						<div className={s.creating__button}>
 							<Button id={s.button} onClick={infoClub} type="primary">
-								Create a team
+								Registration of team
 							</Button>
 						</div>
 					</Col>
@@ -93,4 +93,4 @@ const CreatingTeam = props => {
 	)
 }
 
-export default CreatingTeam
+export default RegistrationTeam

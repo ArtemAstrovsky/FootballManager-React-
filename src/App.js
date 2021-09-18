@@ -1,13 +1,13 @@
 import './App.css'
-import HeaderMenu from './Header/Header'
+import HeaderMenu from './HeaderMenu/HeaderMenu'
 import React from 'react'
 import Game from './Game/Game'
 import Transfer from './Transfer/Transfer'
 import Home from './Home/Home'
-import CreatingTeam from './CreatingTeam/CreatingTeam'
+import RegistrationTeam from './RegistrationTeam/RegistrationTeam'
 import Registration from './Registration/Registration'
 import Error from './Error/Error'
-import Composition from './Сomposition/Сomposition'
+import ClubPlayers from './Сomposition/Сomposition'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App(props) {
@@ -30,13 +30,17 @@ function App(props) {
 					<Route exact path="/transfer" component={Transfer} />
 					<Route
 						exact
-						path="/creatingteam"
+						path="/registrationteam"
 						render={() => (
-							<CreatingTeam form={props.state.form} logo={props.state.logo} />
+							<RegistrationTeam
+								form={props.state.form}
+								logo={props.state.logo}
+							/>
 						)}
 					/>
-					<Route exact path="/composition" component={Composition} />
-					<Route exact path="/creatingteam" component={CreatingTeam} />
+					<Route exact path="/clubplayers" component={ClubPlayers} />
+					<Route exact path="/registrationteam" component={RegistrationTeam} />
+					<Route exact path="/academy-club" component={Home} />
 					<Route exact path="/registration" component={Registration} />
 					<Route component={Error} />
 				</Switch>

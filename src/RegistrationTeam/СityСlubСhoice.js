@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './CreatingTeam.module.css'
+import s from './RegistrationTeam.module.css'
 import { Input, Radio, message } from 'antd'
 import {
 	UserOutlined,
@@ -51,11 +51,11 @@ const СityСlubСhoice = ({
 						value={difficulty}
 						defaultValue={60000000}
 					>
-						<Radio value={40000000}>Heavy</Radio>
+						<Radio value={80000000}>Heavy</Radio>
 						<br />
-						<Radio value={60000000}>Medium</Radio>
+						<Radio value={100000000}>Medium</Radio>
 						<br />
-						<Radio value={80000000}>Light</Radio>
+						<Radio value={120000000}>Light</Radio>
 						<br />
 					</Radio.Group>
 				</div>

@@ -31,7 +31,9 @@ function Game() {
 				message.info('Congratulations to the winners of the game ', 2.5)
 			)
 	}
-
+	// The function displays the game of the tournament in the array of [1,2], [3,4] when you press the game "Game"
+	// occurs a random selection of a team, where the winner is revealed to the "force" of the team, in case of a
+	// draw when Conducted the game at home has a passenger program.
 	function schedule(array, round) {
 		if (!round) {
 			var teams = array.length,
