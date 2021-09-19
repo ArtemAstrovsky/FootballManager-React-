@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom'
 import { message } from 'antd'
 
 function ResetAllSettings() {
-	const [settingsReset, setSettingsReset] = useState([])
+	const [settingsReset, setSettingsReset] = useState()
 	let history = useHistory()
 
 	useEffect(() => {

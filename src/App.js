@@ -1,5 +1,4 @@
 import './App.css'
-import HeaderMenu from './HeaderMenu/HeaderMenu'
 import React from 'react'
 import Game from './Game/Game'
 import Transfer from './Transfer/Transfer'
@@ -14,20 +13,24 @@ function App(props) {
 	return (
 		<div>
 			<Router>
-				<HeaderMenu nav={props.state.nav} />
 				<Switch>
-					<Route exact path="/" component={Home} />
+					<Route exact path="/" render={() => <Home nav={props.state.nav} />} />
 					<Route
 						exact
 						path="/game"
 						render={() => (
 							<Game
+								nav={props.state.nav}
 								сlubGames={props.state.сlubGames}
 								otherGames={props.state.otherGames}
 							/>
 						)}
 					/>
-					<Route exact path="/transfer" component={Transfer} />
+					<Route
+						exact
+						path="/transfer"
+						render={() => <Transfer nav={props.state.nav} />}
+					/>
 					<Route
 						exact
 						path="/registrationteam"
@@ -38,9 +41,17 @@ function App(props) {
 							/>
 						)}
 					/>
-					<Route exact path="/clubplayers" component={ClubPlayers} />
+					<Route
+						exact
+						path="/clubplayers"
+						render={() => <ClubPlayers nav={props.state.nav} />}
+					/>
 					<Route exact path="/registrationteam" component={RegistrationTeam} />
-					<Route exact path="/academy-club" component={Home} />
+					<Route
+						exact
+						path="/academy-club"
+						render={() => <Home nav={props.state.nav} />}
+					/>
 					<Route exact path="/registration" component={Registration} />
 					<Route component={Error} />
 				</Switch>

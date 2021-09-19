@@ -46,4 +46,3 @@ function HeaderMenu(props) {
 }
 
 export default HeaderMenu
-// defaultSelectedKeys={['2']}

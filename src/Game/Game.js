@@ -6,8 +6,9 @@ import ClubTable from './СlubTable'
 import TabloMatches from './TabloMatches'
 import Loader from '../Loader/Loader'
 import { Alert, message } from 'antd'
+import HeaderMenu from '../HeaderMenu/HeaderMenu'
 
-function Game() {
+function Game(props) {
 	const listTournamentTeams = [
 		1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
 	]
@@ -170,28 +171,30 @@ function Game() {
 		})
 	}
 	return (
-		<div className={s.game}>
-			<div className={s.game__conteiner}>
-				{isLoading ? (
-					<Loader />
-				) : (
-					<TabloMatches
-						goalsFirstTeam={goalsFirstTeam}
-						goalsSecondTeam={goalsSecondTeam}
-						yourTeam={yourTeam}
-						clubOpponent={clubOpponent}
-						infoClub={infoClub}
-					/>
-				)}
-				<Button
-					className={s.game__button}
-					onClick={сhampionshipGames}
-					type="primary"
-				>
-					Game
-				</Button>
-			</div>
-			{/* <Alert
+		<>
+			<HeaderMenu nav={props.nav} />
+			<div className={s.game}>
+				<div className={s.game__conteiner}>
+					{isLoading ? (
+						<Loader />
+					) : (
+						<TabloMatches
+							goalsFirstTeam={goalsFirstTeam}
+							goalsSecondTeam={goalsSecondTeam}
+							yourTeam={yourTeam}
+							clubOpponent={clubOpponent}
+							infoClub={infoClub}
+						/>
+					)}
+					<Button
+						className={s.game__button}
+						onClick={сhampionshipGames}
+						type="primary"
+					>
+						Game
+					</Button>
+				</div>
+				{/* <Alert
 				message="Success Tips"
 				description="You can spend a certain amount for the preparation of the player at the Academy, 
 					its characteristics and the price will be yearbly generated, and later it will be possible to sell it. 
@@ -201,13 +204,14 @@ function Game() {
 				showIcon
 				closable
 			/> */}
-			<div className={s.clublist__conteiner}>
-				<div className={s.game__clubtable}>
-					<h1>Match schedule</h1>
-					<ClubTable />
+				<div className={s.clublist__conteiner}>
+					<div className={s.game__clubtable}>
+						<h1>Match schedule</h1>
+						<ClubTable />
+					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 

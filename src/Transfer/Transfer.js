@@ -4,8 +4,9 @@ import { message, Statistic, Alert } from 'antd'
 import s from './Transfer.module.css'
 import { useEffect, useState } from 'react'
 import Loader from '../Loader/Loader'
+import HeaderMenu from '../HeaderMenu/HeaderMenu'
 
-function Transfer() {
+function Transfer(props) {
 	const info = () => {
 		message.info(`In this section, you can purchase players. Pay attention to the strength and cost when evaluating 
 			the team budget. The maximum number of players available to you by the tournament rules - 20. The minimum number
@@ -27,6 +28,7 @@ function Transfer() {
 	}, [])
 	return (
 		<>
+			<HeaderMenu nav={props.nav} />
 			<div className={s.transfer}>
 				<Statistic title="Balance" prefix="$" value={balanceTeam} />
 				<h1>Transfer players</h1>

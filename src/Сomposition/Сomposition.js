@@ -3,8 +3,9 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import Loader from '../Loader/Loader'
 import СompositionList from './СompositionList'
+import HeaderMenu from '../HeaderMenu/HeaderMenu'
 
-function Сomposition() {
+function Сomposition(props) {
 	const [compositionList, setСompositionList] = useState([])
 	const [isLoading, setIsLoading] = useState(true)
 
@@ -17,15 +18,18 @@ function Сomposition() {
 			})
 	}, [])
 	return (
-		<div className={s.composition}>
-			<div>
-				{isLoading ? (
-					<Loader />
-				) : (
-					<СompositionList compositionList={compositionList} />
-				)}
+		<>
+			<HeaderMenu nav={props.nav} />
+			<div className={s.composition}>
+				<div>
+					{isLoading ? (
+						<Loader />
+					) : (
+						<СompositionList compositionList={compositionList} />
+					)}
+				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 

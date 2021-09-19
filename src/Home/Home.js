@@ -4,8 +4,9 @@ import Loader from '../Loader/Loader'
 import YourTeam from './YourTeam'
 import MatchList from './MatchList'
 import { useHistory } from 'react-router-dom'
+import HeaderMenu from '../HeaderMenu/HeaderMenu'
 
-function Home() {
+function Home(props) {
 	let history = useHistory()
 	const [match, setMatch] = useState([])
 	const [isLoading, setIsLoading] = useState(true)
@@ -27,13 +28,16 @@ function Home() {
 	}, [])
 
 	return (
-		<div className={s.home}>
-			<div>{isLoading ? <Loader /> : <YourTeam />}</div>
-			<div>
-				<h1>European Premier League</h1>
+		<>
+			<HeaderMenu nav={props.nav} />
+			<div className={s.home}>
+				<div>{isLoading ? <Loader /> : <YourTeam />}</div>
+				<div>
+					<h1>European Premier League</h1>
+				</div>
+				<div>{isLoading ? <Loader /> : <MatchList matchList={match} />}</div>
 			</div>
-			<div>{isLoading ? <Loader /> : <MatchList matchList={match} />}</div>
-		</div>
+		</>
 	)
 }
 
