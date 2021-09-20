@@ -242,9 +242,9 @@
 		},
 		{
 			"id": 16,
-			"clubName": "yourclub",
+			"clubName": "Zenit",
 			"force": 0,
-			"logotype": "../img/Club7.png",
+			"logotype": "../img/Club8.png",
 			"game": 0,
 			"victory": 0,
 			"draw": 0,
@@ -252,8 +252,8 @@
 			"glasses": 0,
 			"money": 0,
 			"numberofplayers": 0,
-			"difficulty": 0,
-			"city": "Name City",
+			"difficulty": 80000000,
+			"city": "Vladik",
 			"uniform": "../img/form6.png"
 		}
 	],
@@ -276,28 +276,37 @@
 		}
 	],
 	"registration": {
-		"registration": false
+		"registration": true
 	},
 	"round": {
 		"round": 1
 	},
-	"gameChampionship": {
-		"1": "",
-		"2": "",
-		"3": "",
-		"4": "",
-		"5": "",
-		"6": "",
-		"7": "",
-		"8": "",
-		"9": "",
-		"10": "",
-		"11": "",
-		"12": "",
-		"13": "",
-		"14": "",
-		"15": ""
-	},
+	"gameChampionship": [
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[]
+	],
 	"playres": [
 		{
 			"id": 101,

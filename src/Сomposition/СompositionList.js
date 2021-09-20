@@ -63,21 +63,3 @@ function СompositionList(props) {
 }
 
 export default СompositionList
-
-// {/* <div className={s.wrapper}>
-// <div className={[s.card__wrapper, s.first].join(' ')}>
-// 	<div className={s.front__card}>
-// 		<img src={item.img} alt={item.it} width="100" height="100"/>
-// 		<h2> {item.playerName} </h2>
-// 		<p>{"Power player : "+item.force} </p>
-// 		<p>{"The Former club : "+item.pastClub} </p>
-// 		<p>Player status : {item.playerStatus ? 'Free player' : 'Player sold'} </p>
-// 	</div>
-// 	<div className={s.back__card}>
-// 		<h2>{item.price+"$"}</h2>
-// 		{item.playerStatus ?
-// 			<Button type="link" id={s.button} onClick={()=> payPlayers(item)}>Buy player</Button> :
-// 			<Button type="link" id={s.button} disabled>Player Sold</Button>}
-// 	</div>
-// </div>
-// </div> */}

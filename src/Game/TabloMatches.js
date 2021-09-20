@@ -1,17 +1,6 @@
 import s from './Game.module.css'
-import { useState, useEffect } from 'react'
 
 function TabloMatches(props) {
-	// console.log(props.infoClub)
-	// console.log(props.clubOpponent)
-	// console.log(props.yourTeam)
-	const [resultsGames, setResultsGames] = useState('')
-	useEffect(() => {
-		fetch('/gameChampionship')
-			.then(result => result.json())
-			.then(result => setResultsGames(result))
-	}, [])
-
 	return (
 		<>
 			<div className={s.game__tablo}>

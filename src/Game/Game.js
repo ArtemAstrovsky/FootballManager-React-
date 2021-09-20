@@ -5,19 +5,21 @@ import { Button } from 'antd'
 import ClubTable from './СlubTable'
 import TabloMatches from './TabloMatches'
 import Loader from '../Loader/Loader'
-import { Alert, message } from 'antd'
+import { message } from 'antd'
 import HeaderMenu from '../HeaderMenu/HeaderMenu'
 
 function Game(props) {
 	const listTournamentTeams = [
 		1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
 	]
+	const maxRound = 30
 	const [isLoading, setIsLoading] = useState(true)
 	const [round, setRound] = useState(1) // The round number that is played now
 	const [yourTeam, setYourTeam] = useState('')
 	const [clubOpponent, setClubOpponent] = useState(0) // Club rival id
 	const [goalsFirstTeam, setGoalsFirstTeam] = useState(0)
 	const [goalsSecondTeam, setGoalsSecondTeam] = useState(0)
+	const [resultsGames, setResultsGames] = useState()
 	const [infoClub, setInfoClub] = useState({
 		id: 1,
 		clubName: 'Liverpool',
@@ -80,12 +82,15 @@ function Game(props) {
 		fetch('/round')
 			.then(result => result.json())
 			.then(result => setRound(result.round))
+		fetch('/gameChampionship')
+			.then(result => result.json())
+			.then(result => setResultsGames(result))
 	}, [])
 
 	function сhampionshipGames() {
-		if (round === 30) alert('The tournament is completed ')
+		let totatorTournament = resultsGames
+		if (round === maxRound) return alert('The tournament is completed ')
 		let scheduleRound = schedule(listTournamentTeams, round)
-		console.log(scheduleRound)
 		setRound(round + 1)
 		nextRound() // Round Update
 		сompletionRown()
@@ -99,14 +104,34 @@ function Game(props) {
 				Math.random() * infoClub[secondClub - 1].force
 			) // Random result of the game (taking into account the force of the team)
 			if (firstClub === 16) {
-				setGoalsFirstTeam(Math.floor(goalsTeamFirst / 100))
-				setGoalsSecondTeam(Math.floor(goalsTeamSecond / 100))
+				let firstTeamWin = setGoalsFirstTeam(Math.floor(goalsTeamFirst / 100))
+				let secondTeamWin = setGoalsSecondTeam(
+					Math.floor(goalsTeamSecond / 100)
+				)
 				setClubOpponent(secondClub)
+				if (firstTeamWin > secondTeamWin) {
+					totatorTournament[round - 1] = true
+					setResultsGames(totatorTournament)
+					makeResultTable(totatorTournament)
+				} else {
+					totatorTournament[round - 1] = false
+					setResultsGames(totatorTournament)
+					makeResultTable(totatorTournament)
+				}
 			}
 			if (secondClub === 16) {
-				setGoalsFirstTeam(Math.floor(goalsTeamSecond / 100))
-				setGoalsSecondTeam(Math.floor(goalsTeamFirst / 100))
+				let firstTeamWin = setGoalsFirstTeam(Math.floor(goalsTeamSecond / 100))
+				let secondTeamWin = setGoalsSecondTeam(Math.floor(goalsTeamFirst / 100))
 				setClubOpponent(firstClub)
+				if (firstTeamWin < secondTeamWin) {
+					totatorTournament[round - 1] = true
+					setResultsGames(totatorTournament)
+					makeResultTable(totatorTournament)
+				} else {
+					totatorTournament[round - 1] = false
+					setResultsGames(totatorTournament)
+					makeResultTable(totatorTournament)
+				}
 			}
 			setTimeout(() => {
 				if (goalsTeamFirst >= goalsTeamSecond) {
@@ -170,6 +195,18 @@ function Game(props) {
 			}),
 		})
 	}
+	function makeResultTable(props) {
+		fetch('/gameChampionship', {
+			method: 'PUT',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				...props,
+			}),
+		})
+	}
 	return (
 		<>
 			<HeaderMenu nav={props.nav} />
@@ -194,16 +231,6 @@ function Game(props) {
 						Game
 					</Button>
 				</div>
-				{/* <Alert
-				message="Success Tips"
-				description="You can spend a certain amount for the preparation of the player at the Academy, 
-					its characteristics and the price will be yearbly generated, and later it will be possible to sell it. 
-					For each game to your account will be the prize money, use them to strengthen the composition (buying new players), 
-					the update of the stadium (more funds will be received for the victory) and to train new team players. "
-				type="info"
-				showIcon
-				closable
-			/> */}
 				<div className={s.clublist__conteiner}>
 					<div className={s.game__clubtable}>
 						<h1>Match schedule</h1>
