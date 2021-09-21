@@ -151,8 +151,8 @@ function Game(props) {
 		}
 	}
 
-	function firstWinnerTeam(firstClub) {
-		fetch('/teams/' + firstClub, {
+	async function firstWinnerTeam(firstClub) {
+		await fetch('/teams/' + firstClub, {
 			method: 'PUT',
 			headers: {
 				Accept: 'application/json',
@@ -166,8 +166,8 @@ function Game(props) {
 			}),
 		})
 	}
-	function secondWinnerTeam(secondClub) {
-		fetch('/teams/' + secondClub, {
+	async function secondWinnerTeam(secondClub) {
+		await fetch('/teams/' + secondClub, {
 			method: 'PUT',
 			headers: {
 				Accept: 'application/json',
