@@ -1,9 +1,9 @@
 # FootballManager(React)
-The appendix has a game in the European Example of the League. When you enter the game, you can choose:
-- Difficulty level,
-- Club logo,
-- Club form,
-- Club name,
+The application has a game in the European League example. When you enter the game, you can choose:
+- complex level,
+- club logo,
+- club form,
+- club name,
 - Hometown.
-Subsequently, you can change - logo, name, shape, stadium, and so on. At the beginning of the game, you must buy 15 players in the team (minimum quantity for the game), based on your budget, you can also prepare your players in the "Academy of Club", where players will be created in the random form, depending on the amount you invest In their training. Subsequently, players can be sold on the Club page.
-The game is calculated from the "Team Force" which form players form. Money can be earned on the purchase and sale of players, games, rental stadium, which can be spent in the strengthening team, training players, and rent a stadium. Good luck. 
+Subsequently, you can change - logo, name, shape, stadium, and so on. At the beginning of the game you need to buy 15 team players (minimum quantity for the game) based on your budget.
+The game is designed from the "Team", which players form. Money can be earned on buying and selling players, games, rental stadium, which can be spent in a fortified team. The game is on the system of 30 games, 15 at home, 15 visiting, the home team has a presence with an equal number of heads. 
