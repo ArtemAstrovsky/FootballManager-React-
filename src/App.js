@@ -7,7 +7,7 @@ import RegistrationTeam from './RegistrationTeam/RegistrationTeam'
 import Registration from './Registration/Registration'
 import Error from './Error/Error'
 import ClubPlayers from './Сomposition/Сomposition'
-import Academyclub from './Academyclub/academyclub'
+import Academyclub from './Academyclub/Academyclub'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App(props) {
