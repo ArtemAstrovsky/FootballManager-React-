@@ -1,6 +1,4 @@
 // import { createStore } from 'redux'
 // import redusers from './index'
 
-// const store = createStore(redusers, {})
-
-// export default store
+// export const store = createStore(redusers, {})
