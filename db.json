@@ -252,7 +252,7 @@
       "glasses": 0,
       "money": 0,
       "numberofplayers": 0,
-      "difficulty": 75700000,
+      "difficulty": 67400000,
       "city": "007",
       "uniform": "../img/form2.png"
     }
@@ -462,7 +462,7 @@
       "pastClub": "Liverpool",
       "force": 72,
       "price": 8300000,
-      "playerStatus": true,
+      "playerStatus": false,
       "img": "/img/player3.png",
       "difficulty": 24800000
     },

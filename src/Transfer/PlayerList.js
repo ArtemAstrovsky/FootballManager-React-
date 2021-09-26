@@ -9,7 +9,6 @@ const PlayerList = props => {
 	const idMyTeam = 16
 
 	function payPlayers(player) {
-		let newBalanceTeam = 0
 		if (props.balanceTeam > player.price) {
 			let question = window.confirm(
 				'Are you sure you want to purchase a player?'
