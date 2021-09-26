@@ -3,32 +3,8 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import state2 from './store/state'
-// import store from './store/store'
-import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-
-const defaultState = {
-	numberPlayers: 5,
-}
-
-const reducer = (state = defaultState, action) => {
-	switch (action.type) {
-		case 'ADD_PLAYER':
-			return {
-				...state,
-				numberPlayers: state.numberPlayers + action.payload,
-			}
-		case 'GET_PLAYER':
-			return {
-				...state,
-				numberPlayers: state.numberPlayers - action.payload,
-			}
-		default:
-			return state
-	}
-}
-
-const store = createStore(reducer)
+import { store } from './store/store'
 
 ReactDOM.render(
 	<React.StrictMode>

@@ -58,5 +58,15 @@ function App(props) {
 
 export default App
 
-// Запуск
-// npx json-server --watch db.json
+// start of a new project
+// npm install -g json-server
+// npx json-server --watch db.json (server start)
+// npx create-react-app name (creating)
+// cd name
+// npm run start - (start program)
+// npm install react-router react-router-dom --save
+// import { useHistory } from 'react-router-dom'  (history)
+// npm install react-devtools --save
+// npm install react-redux --save
+// npm install react-redux --save
+// npm install redux-thunk --save

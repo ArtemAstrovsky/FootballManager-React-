@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 function Academyclub(props) {
 	const dispatch = useDispatch()
-	const numberPlayers = useSelector(state => state.numberPlayers)
+	const numberPlayers = useSelector(state => state.numberPlayers.numberPlayers)
 
 	const addPlayer = () => {
 		dispatch({ type: 'ADD_PLAYER', payload: 1 })
