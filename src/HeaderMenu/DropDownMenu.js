@@ -58,7 +58,6 @@ class DropDownMenu extends React.Component {
 					<p>
 						<ResetAllSettings />
 					</p>
-					<p>Some contents...</p>
 				</Drawer>
 			</>
 		)

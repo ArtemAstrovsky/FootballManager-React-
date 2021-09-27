@@ -25,7 +25,7 @@ function Home(props) {
 					history.push('/registration')
 				}
 			})
-	}, [])
+	})
 
 	return (
 		<>

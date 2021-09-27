@@ -1,11 +1,8 @@
 import s from './Сomposition.module.css'
 import React from 'react'
 import { Button } from 'antd'
-import { useState } from 'react'
 
 function СompositionList(props) {
-	const [compositionList2, setСompositionList2] = useState([props])
-
 	function salePlayers(player) {
 		fetch('/playres/' + player.id, {
 			method: 'PUT',
@@ -15,10 +12,6 @@ function СompositionList(props) {
 			},
 			body: JSON.stringify({ ...player, playerStatus: true }),
 		})
-			.then(result => result.json())
-			.then(result => {
-				setСompositionList2(result)
-			})
 	}
 	return (
 		<div className={s.headerlist}>

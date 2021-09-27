@@ -276,7 +276,7 @@
     }
   ],
   "registration": {
-    "registration": true
+    "registration": false
   },
   "round": {
     "round": 1
@@ -319,7 +319,7 @@
       "pastClub": "PSG",
       "force": 90,
       "price": 13110000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player3.png",
       "difficulty": 16890000
     },
@@ -329,7 +329,7 @@
       "pastClub": "Liverpool",
       "force": 82,
       "price": 9940000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player1.png"
     },
     {
@@ -338,7 +338,7 @@
       "pastClub": "Liverpool",
       "force": 80,
       "price": 11730000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player2.png"
     },
     {
@@ -347,7 +347,7 @@
       "pastClub": "Manchester United",
       "force": 91,
       "price": 13300000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player3.png",
       "difficulty": 30000000
     },
@@ -357,7 +357,7 @@
       "pastClub": "Bavaria",
       "force": 85,
       "price": 10455000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player3.png"
     },
     {
@@ -366,7 +366,7 @@
       "pastClub": "Liverpool",
       "force": 84,
       "price": 10330000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player2.png",
       "difficulty": 16700000
     },
@@ -376,7 +376,7 @@
       "pastClub": "Manchester city",
       "force": 78,
       "price": 10700000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player2.png"
     },
     {
@@ -385,7 +385,7 @@
       "pastClub": "Manchester city",
       "force": 76,
       "price": 9600000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player1.png"
     },
     {
@@ -403,7 +403,7 @@
       "pastClub": "Tottenham",
       "force": 59,
       "price": 6300000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player3.png",
       "difficulty": 30000000
     },
@@ -413,7 +413,7 @@
       "pastClub": "Сrystal Pelas",
       "force": 55,
       "price": 5300000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player2.png",
       "difficulty": 24770000
     },
@@ -423,7 +423,7 @@
       "pastClub": "Arsenal",
       "force": 55,
       "price": 5230000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player2.png",
       "difficulty": 23700000
     },
@@ -433,7 +433,7 @@
       "pastClub": "Manchester United",
       "force": 49,
       "price": 4300000,
-      "playerStatus": false,
+      "playerStatus": true,
       "img": "/img/player1.png",
       "difficulty": 30000000
     },

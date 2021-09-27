@@ -12,10 +12,10 @@ const Registration = () => {
 						<img src="../img/logo.png" alt="" />
 						<div className={s.header__btm}>
 							<Button id={s.header__button} type="primary">
-								ENTRANCE TO YOURS
+								<Link to="/registrationteam">ENTRANCE TO YOURS</Link>
 							</Button>
 							<Button id={s.header__button2} type="primary">
-								REGISTRATION
+								<Link to="/registrationteam">REGISTRATION</Link>
 							</Button>
 						</div>
 					</div>
